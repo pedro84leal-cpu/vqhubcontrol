@@ -1,0 +1,8 @@
+.pos{
+    width: max-content;
+    top:600px;
+    position:absolute;
+    color: brown;
+    height: 600px;
+    border: 1px solid black;
+}
