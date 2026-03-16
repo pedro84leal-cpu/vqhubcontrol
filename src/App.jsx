@@ -8,7 +8,7 @@ import E_flow from './assets/Pages/Mirtilio_Menu/eflow.jsx';
 
 function App() {
   return (
-    <BrowserRouter>   
+    <BrowserRouter basename="/vqhubcontrol">  
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/mirtilo-console" element={<MirtiloConsole />} />
