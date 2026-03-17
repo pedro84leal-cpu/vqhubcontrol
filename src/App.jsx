@@ -4,11 +4,11 @@ import MirtiloConsole from './assets/Pages/Mirtilio_Menu/MirtiloConsole.jsx';
 import MonitorTemperaturas from './assets/Pages/MonitorTemperaturas.jsx';
 import MatrizErros from './assets/Pages/MatrizErros.jsx';
 import Satelite from './assets/Pages/Mirtilio_Menu/Satelites.jsx';
-import E_flow from './assets/Pages/Mirtilio_Menu/eflow.jsx';
+import E_flow from './assets/Pages/Mirtilio_Menu/E_flow.jsx';
 
 function App() {
   return (
-    <BrowserRouter basename="/vqhubcontrol">  
+    <BrowserRouter basename='/vqhubcontrol'>  
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/mirtilo-console" element={<MirtiloConsole />} />
