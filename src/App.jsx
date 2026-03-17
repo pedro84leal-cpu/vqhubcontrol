@@ -7,6 +7,8 @@ import Satelite from './assets/Pages/Mirtilio_Menu/Satelites';
 import E_flow from './assets/Pages/Mirtilio_Menu/E_flow';
 
 function App() {
+  
+  const basename = process.env.NODE_ENV === 'production' ? '/vqhubcontrol' : '';
   return (
     <BrowserRouter basename='/vqhubcontrol'>  
       <Routes>
