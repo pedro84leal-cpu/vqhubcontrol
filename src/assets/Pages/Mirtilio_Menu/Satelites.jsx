@@ -5,7 +5,7 @@ import BB from '../../Images/BB.png';
 import Sat from '../../Images/sate.png';
 import Eflow from '../../Images/e-flow.png';
 import MenuPrincipal from '../../Components/Menus/menuPrincipal';
-import satelite from '../../Images/CLUSTERoffice.jpg';
+import imgSat from '../../Images/satelites.jpg';
 
 
 
@@ -182,7 +182,7 @@ function Satelite() {
         </button>
 
         <div className={styles.imagem}>
-           <img src={satelite} className="satelite" alt="Satélites"/>
+           <img src={imgSat} className={styles.imgStyle} alt="Satélites"/>
         </div>
 
         </div>

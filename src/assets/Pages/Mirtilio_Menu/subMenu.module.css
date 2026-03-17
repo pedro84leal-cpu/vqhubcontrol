@@ -144,6 +144,8 @@
 
 .MenubtnConexao {
 
+    position: relative;
+    top: -20px;
     font-size: 12px;
     font-family: Ubuntu;
     font-weight: 500;
@@ -188,7 +190,7 @@
     left: 80px;
     width: 30px;
     height: 65px;
-    top: 15px;
+    top: -10px;
     object-fit: contain;
 }
 
@@ -199,7 +201,7 @@
 .controlbuttonGreen {
 
     position: relative;
-    top: 60px;
+    top: 20px;
     background-color: #61dafb;
     border: none;
     color: #282c34;
@@ -222,7 +224,7 @@
 
 .controlbuttonRed {
     position: relative;
-    top: 80px;
+    top: 35px;
     background-color: #61dafb;
     border: none;
     color: #282c34;
@@ -243,9 +245,6 @@
 }
 
 
-
-
-
 .rodape {
   background-color: #f0f0f07a;
   padding: 20px;
@@ -260,18 +259,23 @@
   font-family: Ubuntu;
 }
 
-
-
-
 .imagem{
     position: fixed;
     width: 60vh;
     height: 100vh;
     min-width: 60px;
-    top: -5px;
+    top: 50px;
     left: 650px; 
-    z-index: 1000;
+    z-index: 9998;
 }
+
+.imgStyle{
+  position: relative;
+  width: 40vh; 
+  height: 70vh;
+  margin: 20px
+}
+
 
 .outputs{
     position: fixed;
@@ -307,4 +311,70 @@
   box-shadow: 
     0 2px 0 #b0b0b0,  
     0 4px 8px rgba(0,0,0,0.2);
+}
+
+.btnEflow1{
+  position: relative;
+  top:60px;
+  font-size: 12px;
+  font-family: Ubuntu;
+  font-weight: 500;
+  background-color: #2563eb;
+  color: white;
+  width: 180px;
+  height: 42px;  
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+  letter-spacing: 0.3px;
+  box-shadow: 0 2px 4px rgba(43, 46, 46, 0.471);
+  z-index: 999;
+}
+
+.btnEflow1:hover{
+  background-color: rgb(25, 85, 172);  
+  transform: translateY(-1px);  
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.471);
+}
+
+.btnEflow1:active {
+  transform: translateY(2px);       
+  background-color: rgb(25, 85, 172);         
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.471);  
+  transition: all 0.05s;              
+}
+
+.btnEflow2{
+  position: relative;
+  top:80px;
+  font-size: 12px;
+  font-family: Ubuntu;
+  font-weight: 500;
+  background-color: #2563eb;
+  color: white;
+  width: 180px;
+  height: 42px;  
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+  letter-spacing: 0.3px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.471);
+  z-index: 999;
+}
+
+.btnEflow2:hover{
+  background-color:  rgb(25, 85, 172);  
+  transform: translateY(-1px);  
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.btnEflow2:active {
+  transform: translateY(2px);       
+  background-color: rgb(25, 85, 172);         
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.471);  
+  transition: all 0.05s;              
 }

@@ -5,7 +5,7 @@ import BB from '../../Images/BB.png';
 import Sat from '../../Images/sate.png';
 import Eflow from '../../Images/e-flow.png';
 import MenuPrincipal from '../../Components/Menus/menuPrincipal';
-import satelite from '../../Images/CLUSTERoffice.jpg';
+import imgEflow from '../../Images/eflow.jpg';
 
 
 
@@ -180,9 +180,17 @@ function E_flow() {
           display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '5px', color: 'white' }}>
           {loading ? '...' : 'OFF'}
         </button>
+     
+        <button className={styles.btnEflow1} onClick={() => handleOutputClick(1)}>
+          Satélites
+        </button>
 
+        <button className={styles.btnEflow2} onClick={() => handleOutputClick(1)}>
+          e-flow
+        </button>
+  
         <div className={styles.imagem}>
-           <img src={satelite} className="satelite" alt="Satélites"/>
+           <img src={imgEflow} className={styles.imgStyle} alt="Satélites"/>
         </div>
 
         </div>
