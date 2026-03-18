@@ -36,7 +36,7 @@ function MatrizErros() {
             <Link onClick={abreSubmenu} className={`${styles.menuItens} ${submenuAberto ? styles.menuAberto : ''}`}>
               <img src={iconEsquemas} className={styles.MenuIcon} alt="Esquemas"/>
 
-               <div class={styles.textoContainer}>       
+               <div className={styles.textoContainer}>       
                 <span>Esquemas PCB's </span>
                 {/*<small className={styles.MenuSubtitulo}>esquemas pcb's</small>*/}
               </div>

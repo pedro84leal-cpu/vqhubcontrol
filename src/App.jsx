@@ -5,6 +5,7 @@ import MonitorTemperaturas from './assets/Pages/MonitorTemperaturas';
 import MatrizErros from './assets/Pages/MatrizErros';
 import Satelite from './assets/Pages/Mirtilio_Menu/Satelites';
 import E_flow from './assets/Pages/Mirtilio_Menu/E_flow';
+import CCSPage from './assets/Pages/ccs-page';
 
 function App() {
   
@@ -18,6 +19,7 @@ function App() {
         <Route path="/matriz-erros" element={<MatrizErros />} />
         <Route path='/satelite' element={<Satelite/>} />
         <Route path='/eflow' element={<E_flow/>}/>
+        <Route path="/ccs" element={<CCSPage />} />
       </Routes>
     </BrowserRouter>
   );

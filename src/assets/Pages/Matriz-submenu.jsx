@@ -16,7 +16,7 @@ function MatrizSubMenu({ submenuAberto }) {
             <div className={styles.menu}>
                 <nav >
 
-                    <Link className={styles.menuItens}>
+                    <Link to="/ccs" className={styles.menuItens}>
                         <img src={circuito} alt="Circuito" className={styles.menuIcon} />
 
                         <div className={styles.textContainer}>
