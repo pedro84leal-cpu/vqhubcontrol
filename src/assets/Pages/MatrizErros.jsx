@@ -5,10 +5,17 @@ import styles from './Mirtilio_Menu/subMenu.module.css'
 import iconEsquemas from '../Images/Esquemas.png';
 import iconComponents from '../Images/componentes.png';
 import Eflow from '../Images/e-flow.png';
+import MatrizSubMenu from './Matriz-submenu';
 
 
 
 function MatrizErros() {
+
+  const [submenuAberto, setSubmenuAberto] = useState(false)
+  
+  const abreSubmenu = () => {
+    setSubmenuAberto(!submenuAberto) 
+  }
 
  return (
     <div className={styles.MenuContainer}>
@@ -26,11 +33,11 @@ function MatrizErros() {
         <aside>
           <nav className={styles.MenuItem}>
 
-            <Link to="/mirtilo-console" onClick={(e) => {e.preventDefault();ativarPino(33, "/mirtilo-console");}}>
+            <Link onClick={abreSubmenu} className={`${styles.menuItens} ${submenuAberto ? styles.menuAberto : ''}`}>
               <img src={iconEsquemas} className={styles.MenuIcon} alt="Esquemas"/>
 
                <div class={styles.textoContainer}>       
-                <span>Esquemas PCB's</span>
+                <span>Esquemas PCB's </span>
                 {/*<small className={styles.MenuSubtitulo}>esquemas pcb's</small>*/}
               </div>
 
@@ -40,7 +47,7 @@ function MatrizErros() {
               <img src={iconComponents} className={styles.MenuIcon} alt="Satélites"/>
 
               <div className={styles.textoContainer}>
-                <span>Esq. Componentes</span>
+                <span>Esq. Componentes </span>
                 {/*<small className={styles.MenuSubtitulo}>4 - output's externas </small>*/}
               </div>
 
@@ -54,7 +61,7 @@ function MatrizErros() {
               </div>
                         
             </Link>*/}
-
+          <MatrizSubMenu submenuAberto={submenuAberto} />
           </nav>
         </aside>
       </div>
