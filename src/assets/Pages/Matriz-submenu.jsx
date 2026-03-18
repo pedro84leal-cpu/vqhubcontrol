@@ -1,6 +1,6 @@
 import styles from './MatrizMenuPCB.module.css';
 import circuito from '../Images/circuito.png';
-import ccmd from '../Images/CCMD.png';
+import ccmd from '../Images/ccmd.png';
 import sensing from '../Images/sensing.png';
 import power from '../Images/power.png';
 import { Link } from 'react-router-dom'; 
