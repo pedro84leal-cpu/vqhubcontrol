@@ -1,14 +1,14 @@
-import styles from './MatrizMenuPCB.module.css';
-import circuito from '../Images/circuito.png';
-import ccmd from '../Images/ccmd.png';
-import sensing from '../Images/sensing.png';
-import power from '../Images/power.png';
+import styles from './../MatrizMenuPCB.module.css';
+import circuito from './../../Images/icones/circuito.png';
+import ccmd from './../../Images/icones/ccmd.png';
+import sensing from './../../Images/icones/sensing.png';
+import power from './../../Images/icones/power.png';
 import { Link } from 'react-router-dom'; 
 
 
 
 
-function MatrizSubMenu({ submenuAberto }) {
+function SubMenuAberto({ submenuAberto }) {
   return (
     <>
       {submenuAberto && (
@@ -61,4 +61,4 @@ function MatrizSubMenu({ submenuAberto }) {
   )
 }
 
-export default MatrizSubMenu;
+export default SubMenuAberto;

@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom'; 
-import styles from './subMenu.module.css'
-import BB from '../../Images/BB.png';
-import Sat from '../../Images/sate.png';
-import Eflow from '../../Images/e-flow.png';
-import ImagemEstado from '../imagBlueberry.tsx';
+import styles from './Menu.module.css'
+import BB from '../../Images/botoes/BB.png';
+import Sat from '../../Images/botoes/sate.png';
+import Eflow from '../../Images/botoes/e-flow.png';
+import ImagemEstado from './imagBlueberry.tsx';
 import MenuPrincipal from '../../Components/Menus/menuPrincipal.jsx';
 
 
-function MirtiloConsole() {
+function Blueberry() {
   
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState('');
@@ -133,7 +133,7 @@ function MirtiloConsole() {
         <aside>
           <nav className={styles.MenuItem}>
 
-            <Link to="/mirtilo-console" onClick={(e) => {e.preventDefault();ativarPino(33, "/mirtilo-console");}}>
+            <Link to="/blueberry" onClick={(e) => {e.preventDefault();ativarPino(33, "/blueberry");}}>
               <img src={BB} className={styles.MenuIcon} alt="BlueBerry"/>
 
                <div class={styles.textoContainer}>       
@@ -235,4 +235,4 @@ function MirtiloConsole() {
   );
 }
 
-export default MirtiloConsole;
+export default Blueberry;

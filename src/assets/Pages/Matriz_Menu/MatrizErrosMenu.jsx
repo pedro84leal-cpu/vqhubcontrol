@@ -1,15 +1,15 @@
-import MenuPrincipal from '../Components/Menus/menuPrincipal';
+import MenuPrincipal from '../../Components/Menus/menuPrincipal';
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom'; 
-import styles from './Mirtilio_Menu/subMenu.module.css'
-import iconEsquemas from '../Images/Esquemas.png';
-import iconComponents from '../Images/componentes.png';
-import Eflow from '../Images/e-flow.png';
-import MatrizSubMenu from './Matriz-submenu';
+import styles from '../Matriz_Menu/Menu.module.css'
+import iconEsquemas from './../../Images/icones/Esquemas.png';
+import iconComponents from './../../Images/icones/componentes.png';
+import Eflow from './../../Images/botoes/e-flow.png';
+import MatrizSubMenu from './MenuBoards';
 
 
 
-function MatrizErros() {
+function MatrizErrosMenu() {
 
   const [submenuAberto, setSubmenuAberto] = useState(false)
   
@@ -71,4 +71,4 @@ function MatrizErros() {
   );
 }
 
-export default MatrizErros;
+export default MatrizErrosMenu;

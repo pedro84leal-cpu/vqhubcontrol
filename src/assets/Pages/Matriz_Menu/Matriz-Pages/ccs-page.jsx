@@ -1,8 +1,8 @@
-import MenuPrincipal from '../Components/Menus/menuPrincipal';
-import ccsBoard from '../Images/ccs-board.jpg'
+import MenuPrincipal from '../../../Components/Menus/menuPrincipal';
+import ccsBoard from '../../../Images/boards/ccs-board.jpg'
 import styles from './ccsPage.module.css';
-import MatrizSubMenu from './Matriz-submenu';
-import MatrizErros from './MatrizErros';
+import MatrizSubMenu from '../MenuBoards';
+import MatrizErros from './../MatrizErrosMenu';
 import { useState } from 'react';
 
 

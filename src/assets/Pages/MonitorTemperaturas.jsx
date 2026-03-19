@@ -1,8 +1,6 @@
-import { Link } from 'react-router-dom'; 
+import MenuPrincipal from '../Components/Menus/menuPrincipal';
 import '../../assets/Pages/MonitorTemperaturas.css'
-import BB from '../../assets/Images/BB.png'
-import Sat from '../../assets/Images/sate.png'
-import Eflow from '../../assets/Images/e-flow.png'
+
 
 
 

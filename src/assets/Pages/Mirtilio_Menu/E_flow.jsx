@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom'; 
-import styles from './subMenu.module.css'
-import BB from '../../Images/BB.png';
-import Sat from '../../Images/sate.png';
-import Eflow from '../../Images/e-flow.png';
+import styles from './Menu.module.css'
+import BB from '../../Images/botoes/BB.png';
+import Sat from '../../Images/botoes/sate.png';
+import Eflow from '../../Images/botoes/e-flow.png';
 import MenuPrincipal from '../../Components/Menus/menuPrincipal';
-import imgEflow from '../../Images/eflow.jpg';
+import imgEflow from '../../Images/carregadores/eflow.jpg';
 
 
 
@@ -123,7 +123,7 @@ function E_flow() {
         <aside>
           <nav className={styles.MenuItem}>
 
-            <Link to="/mirtilo-console">
+            <Link to="/blueberry">
               <img src={BB} className={styles.MenuIcon} alt="BlueBerry"/>
 
                <div class={styles.textoContainer}>       

@@ -1,11 +1,11 @@
 import { Link } from 'react-router-dom'; 
 import './menuPrincipal.css';
-import Consola from '../../../assets/Images/dash.png';
-import Matriz from '../../../assets/Images/Matriz.png';
-import Utilitarios from '../../../assets/Images/Tools.png';
-import Instrucoes from '../../../assets/Images/Inst.png';
-import Dashboard from '../../../assets/Images/gestao.png';
-import TesteReport from '../../../assets/Images/testereport.png';
+import Consola from '../../../assets/Images/icones/dash.png';
+import Matriz from '../../../assets/Images/icones/Matriz.png';
+import Utilitarios from '../../../assets/Images/icones/Tools.png';
+import Instrucoes from '../../../assets/Images/icones/Inst.png';
+import Dashboard from '../../../assets/Images/icones/gestao.png';
+import TesteReport from '../../../assets/Images/icones/testereport.png';
 
 
 function MenuPrincipal() {
