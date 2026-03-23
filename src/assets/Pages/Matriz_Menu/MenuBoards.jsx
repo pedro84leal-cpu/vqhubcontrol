@@ -1,4 +1,4 @@
-import styles from './../MatrizMenuPCB.module.css';
+import styles from '../Matriz_Menu/MenuPCB.module.css';
 import circuito from './../../Images/icones/circuito.png';
 import ccmd from './../../Images/icones/ccmd.png';
 import sensing from './../../Images/icones/sensing.png';

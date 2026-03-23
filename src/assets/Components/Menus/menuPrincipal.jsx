@@ -44,7 +44,7 @@ function MenuPrincipal() {
                         <span>Instruções</span>
                     </Link>
 
-                    <Link to="/matriz-erros" className="menuPrincipal-Item">
+                    <Link to="/dashboard" className="menuPrincipal-Item">
                         <img src={Dashboard} className="icon" alt="Dashboard"/>
                         <span>Dashboard</span>
                     </Link>

@@ -7,6 +7,8 @@ import E_flow from './assets/Pages/Mirtilio_Menu/E_flow';
 import CCSPage from './assets/Pages/Matriz_Menu/Matriz-Pages/ccs-page';
 import Blueberry from './assets/Pages/Mirtilio_Menu/blueberry';
 import MirtilioConsoleMenu from './assets/Pages/Mirtilio_Menu/MirtilioConsoleMenu';
+import Dashboard from './assets/Pages/Dashboard/dashboard';
+import Gestao from './assets/Pages/Dashboard/Dashboard-Pages/gestaoLinha';
 
 function App() {
   
@@ -22,6 +24,8 @@ function App() {
         <Route path='/eflow' element={<E_flow/>}/>
         <Route path="/ccs" element={<CCSPage />}/>
         <Route path="/mirtilo-console" element={<MirtilioConsoleMenu/>} />
+        <Route path='/dashboard' element={<Dashboard/>} />
+        <Route path='/gestao' element={<Gestao/>} />
       </Routes>
     </BrowserRouter>
   );
