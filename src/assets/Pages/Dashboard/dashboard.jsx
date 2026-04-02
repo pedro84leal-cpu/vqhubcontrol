@@ -1,9 +1,10 @@
 import { Link } from 'react-router-dom';
 import MenuPrincipal from "../../Components/Menus/menuPrincipal"
-import styles from '../../Pages/Dashboard/Menu.module.css'
-import iconFluxo from  '../../Images/icones/fluxo.png'
-import iconRework from '../../Images/icones/rework.png'
-import iconPlaneamento from '../../Images/icones/Planeamento.png'
+import styles from '../../Pages/Dashboard/dashboard.module.css'
+import { TiFlowParallel } from "react-icons/ti";
+import { MdEditCalendar } from "react-icons/md";
+import { IoCodeWorkingSharp } from "react-icons/io5";
+import { IoChevronBack } from "react-icons/io5";
 
 
 
@@ -11,63 +12,43 @@ import iconPlaneamento from '../../Images/icones/Planeamento.png'
 function Dashboard(){
 
     return(
-        <div className={styles.MenuContainer}>
-            <MenuPrincipal/>
-                <div className={styles.Menu}>
-                    <header className={styles.MenuTitulo}>
-                        <h1>
-                            Dashboard
-                        </h1>
+        <>
+        <div className={styles.dashboardContainer}>
+        <MenuPrincipal/>
+        <div className={styles.dashboardMenu}>
+            <header className={styles.dashboardTitulo}>
+                <h1>
+                    Dashboard
+                </h1>
+            </header>
+            <aside>
+            <nav className={styles.dashboardNav}>
 
-                    </header>
+                <Link to="/" className={styles.dashboardLink}>
+                    <IoChevronBack  className={styles.dashboardIcon} />
+                </Link>
 
-                    <aside>
-                    <nav className={styles.MenuItem}>
+                <Link to="/gestao" className={styles.dashboardLink}>
+                    <TiFlowParallel className={styles.dashboardIcon} />
+                    <span>Gestão de linha </span>
+                </Link>
 
-                        <Link to="/gestao">
-                            <img src={iconFluxo} className={styles.MenuIcon} alt="Esquemas"/>
+                <Link className={styles.dashboardLink}>
+                    <MdEditCalendar className={styles.dashboardIcon}/>     
+                    <span>Planeamento </span>
+                </Link>
 
-                            <div className={styles.textoContainer}>       
-                                <span>Gestão de linha </span>
-                                {/*<small className={styles.MenuSubtitulo}>esquemas pcb's</small>*/}
-                            </div>
+                <Link className={styles.dashboardLink} >
+                    <IoCodeWorkingSharp className={styles.dashboardIcon} />
+                    <span>Rework's </span>
+                </Link>
 
-                        </Link>
-
-                           <Link>
-                            <img src={iconPlaneamento} className={styles.MenuIcon} alt="Esquemas"/>
-
-                            <div className={styles.textoContainer}>       
-                                <span>Planeamento </span>
-                                {/*<small className={styles.MenuSubtitulo}>esquemas pcb's</small>*/}
-                            </div>
-
-                        </Link>
-
-                        <Link >
-                            <img src={iconRework} className={styles.MenuIcon} alt="Satélites"/>
-
-                            <div className={styles.textoContainer}>
-                                <span>Rework's </span>
-                                {/*<small className={styles.MenuSubtitulo}>4 - output's externas </small>*/}
-                            </div>
-
-                        </Link>
-
-                        {/*<Link to="/eflow">  
-                            <img src={Eflow} className={styles.MenuIcon} alt="e-Flow"/>
-          
-                            <div className={styles.textoContainer}>
-                                <span>teste e-flow</span>
-                            </div>
-                        
-                        </Link>*/}
-
-                    </nav>
-                    </aside>
-                </div>
+                </nav>
+                </aside>
+            </div>
     
-        </div>    
+        </div> 
+        </>   
     )
 }
 

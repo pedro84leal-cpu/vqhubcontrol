@@ -1,11 +1,11 @@
 import MenuPrincipal from '../../Components/Menus/menuPrincipal';
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom'; 
-import styles from '../Matriz_Menu/Menu.module.css'
-import iconEsquemas from './../../Images/icones/Esquemas.png';
-import iconComponents from './../../Images/icones/componentes.png';
-import Eflow from './../../Images/botoes/e-flow.png';
+import styles from '../Matriz_Menu/Matriz.module.css'
 import MatrizSubMenu from './MenuBoards';
+import { GiElectricalResistance } from "react-icons/gi";
+import { IoChevronBack } from "react-icons/io5";
+import { BiSolidComponent } from "react-icons/bi";
 
 
 
@@ -18,55 +18,37 @@ function MatrizErrosMenu() {
   }
 
  return (
-    <div className={styles.MenuContainer}>
+    <>
+    <div className={styles.matrizContainer}>
       <MenuPrincipal/>
-      <div className={styles.Menu}>
-        <header className={styles.MenuTitulo}>
+      <div className={styles.matrizMenu}>
+        <header className={styles.matrizTitulo}>
           <h1>
-            Matriz
+            Matriz de erros
           </h1>
-          <p>
-            Erros
-          </p>
-
         </header>
         <aside>
-          <nav className={styles.MenuItem}>
+          <nav className={styles.matrizNav}>
 
-            <Link onClick={abreSubmenu} className={`${styles.menuItens} ${submenuAberto ? styles.menuAberto : ''}`}>
-              <img src={iconEsquemas} className={styles.MenuIcon} alt="Esquemas"/>
-
-               <div className={styles.textoContainer}>       
-                <span>Esquemas PCB's </span>
-                {/*<small className={styles.MenuSubtitulo}>esquemas pcb's</small>*/}
-              </div>
-
+            <Link to="/" className={styles.matrizLink}>
+                <IoChevronBack  className={styles.matrizIcon} />
             </Link>
 
-            <Link to="/satelite" onClick={() => desativarPino(33)} >
-              <img src={iconComponents} className={styles.MenuIcon} alt="Satélites"/>
-
-              <div className={styles.textoContainer}>
-                <span>Esq. Componentes </span>
-                {/*<small className={styles.MenuSubtitulo}>4 - output's externas </small>*/}
-              </div>
-
+            <Link onClick={abreSubmenu} className={`${styles.matrizLink} ${submenuAberto ? styles.menuAberto : ''}`}>
+              <GiElectricalResistance className={styles.matrizIcon} />     
+              <span>Esquemas PCB's </span>
             </Link>
 
-           {/*<Link to="/eflow">  
-              <img src={Eflow} className={styles.MenuIcon} alt="e-Flow"/>
-          
-              <div className={styles.textoContainer}>
-                <span>teste e-flow</span>
-              </div>
-                        
-            </Link>*/}
+            <Link onClick={abreSubmenu} className={`${styles.matrizLink} ${submenuAberto ? styles.menuAberto : ''}`}>
+              <BiSolidComponent  className={styles.MenuIcon} />
+              <span>Esq. Componentes </span>
+            </Link>
           <MatrizSubMenu submenuAberto={submenuAberto} />
           </nav>
         </aside>
-      </div>
-    
+      </div>  
     </div>
+    </>
     
   );
 }

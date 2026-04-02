@@ -4,6 +4,7 @@ import Sat from '../../Images/botoes/sate.png';
 import Eflow from '../../Images/botoes/e-flow.png';
 import MenuPrincipal from '../../Components/Menus/menuPrincipal';
 import {Link, useNavigate } from 'react-router-dom';
+import { IoChevronBack } from "react-icons/io5";
 
 
 
@@ -11,10 +12,10 @@ function MirtilioConsoleMenu() {
     const navigate = useNavigate();
     
   return (
-    <div className={styles.MenuContainer}>
+    <>   
         <MenuPrincipal/>
-        <div className={styles.Menu}>
-        <header className={styles.MenuTitulo}>
+        <div className={styles.menu}>
+        <header className={styles.titulo}>
           <h1>
             Mirtilo
           </h1>
@@ -25,6 +26,10 @@ function MirtilioConsoleMenu() {
         </header>
         <aside>
           <nav className={styles.MenuItem}>
+
+            <Link to="/">
+              <IoChevronBack  className={styles.dashboardIcon} />
+            </Link>
 
             <Link to="/blueberry">
               <img src={BB} className={styles.MenuIcon} alt="BlueBerry"/>
@@ -41,7 +46,7 @@ function MirtilioConsoleMenu() {
 
               <div className={styles.textoContainer}>
                 <span>teste de satélites</span>
-                <small className={styles.MenuSubtitulo}>4 - output's externas </small>
+                <small className={styles.MenuSubtitulo}>satélite - satélite coled </small>
               </div>
 
             </Link>
@@ -58,7 +63,12 @@ function MirtilioConsoleMenu() {
           </nav>
         </aside>
         </div>
+
+    <div className={styles.container}>
+
+
     </div>
+  </>
   );
 }
 

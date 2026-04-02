@@ -108,10 +108,10 @@ function Satelite() {
   
   
   return (
-    <div className={styles.MenuContainer}>
-      <MenuPrincipal/>
-      <div className={styles.Menu}>
-        <header className={styles.MenuTitulo}>
+    <>
+     <MenuPrincipal/>
+      <div className={styles.menu}>
+        <header className={styles.titulo}>
           <h1>
             Mirtilo
           </h1>
@@ -192,7 +192,10 @@ function Satelite() {
             </div>
             )}
            </footer>
-        </div>
+
+      <div className={styles.container}>
+      </div>
+    </>
   );
 }
 

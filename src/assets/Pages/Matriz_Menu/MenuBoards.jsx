@@ -50,9 +50,7 @@ function SubMenuAberto({ submenuAberto }) {
                             <span>Power</span>
                         </div>
 
-                    </Link>
-                    
-               
+                    </Link>                                  
                 </nav>
             </div>
         </div>

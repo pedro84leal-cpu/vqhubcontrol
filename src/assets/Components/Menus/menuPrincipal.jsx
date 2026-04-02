@@ -1,63 +1,71 @@
 import { Link } from 'react-router-dom'; 
-import './menuPrincipal.css';
-import Consola from '../../../assets/Images/icones/dash.png';
-import Matriz from '../../../assets/Images/icones/Matriz.png';
-import Utilitarios from '../../../assets/Images/icones/Tools.png';
-import Instrucoes from '../../../assets/Images/icones/Inst.png';
-import Dashboard from '../../../assets/Images/icones/gestao.png';
-import TesteReport from '../../../assets/Images/icones/testereport.png';
+import styles from '../Menus/menuPrincipal.module.css'
+import { PiLinkSimpleBold } from "react-icons/pi";
+import { MdTroubleshoot } from "react-icons/md";
+import { GrVirtualMachine } from "react-icons/gr";
+import { VscDebugConsole } from "react-icons/vsc";
+import { RxDashboard } from "react-icons/rx";
+import { TbReportAnalytics } from "react-icons/tb";
+import { VscTools } from "react-icons/vsc";
 
 
 function MenuPrincipal() {
   return (
-    <div className="containerPrincipal">
-        <div className="menuPrincipal">
-            <header className='Principal-Titulo'>
-                <h1>
-                    VQ
-                </h1>
-                <p>
-                    Hub Control
-                </p>
-            </header>
-            <aside>
+    <>
+      <div className={styles.menu}>
+        <header className={styles.titulo}>
+            <h1>
+                VQ
+            </h1>
+            <p className={styles.subtitulo}>
+                Hub Control
+            </p>
+        </header>
+        
+        <nav className={styles.nav}>
 
-                <nav>
+          <Link to="/dashboard" className={styles.link}>
+            <RxDashboard className={styles.icon} />
+            <span>Dashboard</span>
+          </Link>
 
-                    <Link to="/mirtilo-console" className="menuPrincipal-Item">
-                        <img src={Consola} className="icon" alt="Mirtilio Console" />
-                        <span>Mirtilio console</span>
-                    </Link>
+           <Link to="/test-report" className={styles.link}>
+            <TbReportAnalytics className={styles.icon} />
+            <span>Test Report</span>
+          </Link>
 
-                    <Link to="/matriz-erros" className="menuPrincipal-Item">
-                        <img src={Matriz} className="icon" alt="Matriz erros"/>
-                        <span>Matriz de erros</span>
-                    </Link>
+          <Link to="/troubleshooting" className={styles.link}>
+            <MdTroubleshoot  className={styles.icon} /> 
+            <span>Troubleshooting</span>
+          </Link>
 
-                    <Link to="/monitor-temperaturas" className="menuPrincipal-Item">
-                        <img src={Utilitarios} className="icon" alt="Utilitarios"/>
-                        <span>Utilitários</span>
-                    </Link>
+          <Link to="/mirtilo-console" className={styles.link}>
+            <GrVirtualMachine className={styles.icon}  />
+            <span>Mirtilio console</span>
+          </Link>
 
-                    <Link to="/matriz-erros" className="menuPrincipal-Item">
-                        <img src={Instrucoes} className="icon" alt="Instrucoes"/>
-                        <span>Instruções</span>
-                    </Link>
+          <Link to="/matriz-erros" className={styles.link}>
+            <VscDebugConsole className={styles.icon}  />
+            <span>Produtividade</span>
+          </Link>
 
-                    <Link to="/dashboard" className="menuPrincipal-Item">
-                        <img src={Dashboard} className="icon" alt="Dashboard"/>
-                        <span>Dashboard</span>
-                    </Link>
+          <Link to="/web" className={styles.link}>
+            <PiLinkSimpleBold className={styles.icon} /> 
+            <span>Links</span>
+          </Link>
 
-                    <Link to="/matriz-erros" className="menuPrincipal-Item">
-                        <img src={TesteReport} className="icon" alt="Test Report"/>
-                        <span>Test Report</span>
-                    </Link>
+          <Link to="/tools" className={styles.link}>
+            <VscTools  className={styles.icon} /> 
+            <span>Tools</span>
+          </Link>
+    
+        </nav>
+      </div>     
 
-                </nav>
-            </aside>
-        </div>       
-     </div>
+      <div className={styles.container}>
+        {/* Conteúdo das páginas aqui */}
+      </div>
+    </>
   );
 }
 

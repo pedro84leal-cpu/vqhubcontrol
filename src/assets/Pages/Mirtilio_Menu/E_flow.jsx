@@ -108,10 +108,11 @@ function E_flow() {
   
   
   return (
-    <div className={styles.MenuContainer}>
+    <>
+    
       <MenuPrincipal/>
-      <div className={styles.Menu}>
-        <header className={styles.MenuTitulo}>
+      <div className={styles.menu}>
+        <header className={styles.titulo}>
           <h1>
             Mirtilo
           </h1>
@@ -200,7 +201,10 @@ function E_flow() {
             </div>
             )}
            </footer>
+        <div className={styles.container}>
+          
         </div>
+    </>
   );
 }
 

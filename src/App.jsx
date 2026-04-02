@@ -1,6 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './assets/Pages/Home';
-import MonitorTemperaturas from './assets/Pages/MonitorTemperaturas';
 import MatrizErros from './assets/Pages/Matriz_Menu/MatrizErrosMenu';
 import Satelite from './assets/Pages/Mirtilio_Menu/Satelites';
 import E_flow from './assets/Pages/Mirtilio_Menu/E_flow';
@@ -9,6 +8,11 @@ import Blueberry from './assets/Pages/Mirtilio_Menu/blueberry';
 import MirtilioConsoleMenu from './assets/Pages/Mirtilio_Menu/MirtilioConsoleMenu';
 import Dashboard from './assets/Pages/Dashboard/dashboard';
 import Gestao from './assets/Pages/Dashboard/Dashboard-Pages/gestaoLinha';
+import Troubleshooting from './assets/Pages/Troubleshooting/troubleshooting';
+import Web from './assets/Pages/WebLinks/Web';
+
+
+
 
 function App() {
   
@@ -18,7 +22,6 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/blueberry" element={<Blueberry/>} />
-        <Route path="/monitor-temperaturas" element={<MonitorTemperaturas />} />
         <Route path="/matriz-erros" element={<MatrizErros />} />
         <Route path='/satelite' element={<Satelite/>} />
         <Route path='/eflow' element={<E_flow/>}/>
@@ -26,6 +29,8 @@ function App() {
         <Route path="/mirtilo-console" element={<MirtilioConsoleMenu/>} />
         <Route path='/dashboard' element={<Dashboard/>} />
         <Route path='/gestao' element={<Gestao/>} />
+        <Route path='/troubleshooting' element={<Troubleshooting/>} />
+        <Route path='/web' element={<Web />} />
       </Routes>
     </BrowserRouter>
   );
