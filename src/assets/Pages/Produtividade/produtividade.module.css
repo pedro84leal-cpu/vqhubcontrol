@@ -1,0 +1,87 @@
+.proContainer {
+
+  display: flex;
+  min-height: 100vh;
+
+}
+
+.proMenu {
+
+  position: fixed;
+  background-color: rgba(0, 100, 255);
+  width: 170px;
+  height: 140vh;
+  min-width: 100px;
+  left: 70px; 
+  border-left: none; 
+  overflow: hidden;
+  z-index: 999;
+  
+}
+
+.proTitulo {
+
+  text-align: center;
+  color: white;
+  padding: 1.6rem 0;
+  font-family: Ubuntu;
+  font-size: 0.7rem;
+
+}
+
+
+
+.proNav {
+
+
+
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 0.5rem 0.5rem;
+}
+
+
+.proLink {
+
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.proLink:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.proIcon {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+}
+
+.proLink span {
+
+    font-size: 0.7rem;
+    font-family: Ubuntu, sans-serif;
+    transition: opacity 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    
+}
+
+.proMenu:hover .webLink span {
+  opacity: 1;
+}
+
+
+.proIcon {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+}

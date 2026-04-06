@@ -3,7 +3,7 @@ import styles from '../Menus/menuPrincipal.module.css'
 import { PiLinkSimpleBold } from "react-icons/pi";
 import { MdTroubleshoot } from "react-icons/md";
 import { GrVirtualMachine } from "react-icons/gr";
-import { VscDebugConsole } from "react-icons/vsc";
+import { SiFastlane } from "react-icons/si";
 import { RxDashboard } from "react-icons/rx";
 import { TbReportAnalytics } from "react-icons/tb";
 import { VscTools } from "react-icons/vsc";
@@ -44,8 +44,8 @@ function MenuPrincipal() {
             <span>Mirtilio console</span>
           </Link>
 
-          <Link to="/matriz-erros" className={styles.link}>
-            <VscDebugConsole className={styles.icon}  />
+          <Link to="/prodt" className={styles.link}>
+            <SiFastlane className={styles.icon}  />
             <span>Produtividade</span>
           </Link>
 
