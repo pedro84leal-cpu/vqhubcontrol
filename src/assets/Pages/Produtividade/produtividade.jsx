@@ -15,7 +15,8 @@ import MenuITAberto from './ITs/menuIT';
 
 
 function Prodt(){
-    const { submenu1Aberto, setSubmenu1Aberto, larguras, posicoes } = useMenu();
+    
+    const { larguras, posicoes } = useMenu();
 
     const [menu_comp_Aberto , setmenu_comp_Aberto ] = useState(false)
   
@@ -40,10 +41,8 @@ function Prodt(){
         <MenuPrincipal/>    
         <div className={styles.proMenu} style={{
                 left: `${posicoes.submenu1}px`,
-                width: `${larguras.submenu1Atual}px`
-            }}
-            onMouseEnter={() => setSubmenu1Aberto(true)}
-            onMouseLeave={() => setSubmenu1Aberto(false)}>
+                width: `${larguras.submenu1Fixo}px`
+            }}>
             
             <header className={styles.proTitulo}>
                 <h1>

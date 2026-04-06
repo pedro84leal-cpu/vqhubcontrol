@@ -10,8 +10,8 @@ export function MenuProvider({ children }) {
     // Larguras
     const larguraMenuPrincipalFechado = 70;
     const larguraMenuPrincipalAberto = 170;
-    const larguraSubmenu1Fixo = 170;   // SEMPRE 170px
-    const larguraSubmenu2Fixo = 80;    // SEMPRE 80px
+    const larguraSubmenu1Fixo = 180;   
+    const larguraSubmenu2Fixo = 80;    
     const offsetLeft = 0;
     
     // Largura atual do menu principal
@@ -20,9 +20,9 @@ export function MenuProvider({ children }) {
         : larguraMenuPrincipalFechado;
     
     // Posições (left) de cada menu
-    const posicaoMenuPrincipal = offsetLeft;                                    // 0
-    const posicaoSubmenu1 = posicaoMenuPrincipal + larguraMenuPrincipalAtual;   // 0 + 70 ou 170
-    const posicaoSubmenu2 = posicaoSubmenu1 + larguraSubmenu1Fixo;              // pos1 + 170
+    const posicaoMenuPrincipal = offsetLeft;                                    
+    const posicaoSubmenu1 = posicaoMenuPrincipal + larguraMenuPrincipalAtual;   
+    const posicaoSubmenu2 = posicaoSubmenu1 + larguraSubmenu1Fixo;              
     
     return (
         <MenuContext.Provider value={{
