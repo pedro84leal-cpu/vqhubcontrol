@@ -18,7 +18,6 @@ function App() {
   
   const basename = process.env.NODE_ENV === 'production' ? '/vqhubcontrol' : '';
   return (
-    <BrowserRouter basename='/vqhubcontrol'>  
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/blueberry" element={<Blueberry/>} />
@@ -32,7 +31,6 @@ function App() {
         <Route path='/tools' element={<Ferramentas />} />
         <Route path='/prodt' element={<Prodt />} />
       </Routes>
-    </BrowserRouter>
   );
 }
 
