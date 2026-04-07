@@ -1,0 +1,381 @@
+
+
+.bbMenu {
+
+  position: fixed;
+  top: 0;
+  background-color: rgba(0, 100, 255);
+  width: 170px;
+  height: 140vh;
+  min-width: 100px;
+  left: 70px; 
+  border-left: none; 
+  overflow: hidden;
+  z-index: 999;  
+}
+
+
+
+.bbTitulo {
+
+  text-align: center;
+  color: white;
+  padding: 2rem 0 1.7rem 0 ;
+  font-family: Ubuntu;
+  font-size: 0.5rem;
+  overflow-wrap: break-word;
+  transition: font-size 0.3s;
+}
+
+.ledONOFF{
+
+    position: relative;
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+
+
+.bbNav {
+
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 0.5rem 0.5rem;
+}
+
+
+.bbLink {
+
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.2s;
+  white-space: nowrap;
+
+}
+
+.bbLink:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+
+.bbIcon {
+
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+}
+
+
+.bbLink span {
+
+    font-size: 0.7rem;
+    font-family: Ubuntu, sans-serif;
+    transition: opacity 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.bbTexto {
+
+  display: flex;
+  flex-direction: column; 
+  line-height: 1.2;
+  gap: 2px;
+  font-family: Ubuntu;
+  font-size: 13px;            
+}
+
+
+.bbSmall {
+  font-size: 0.6rem;
+  opacity: 0.7;
+}
+
+.bbMenu:hover .bbLink span {
+  opacity: 1;
+}
+
+
+.bbIcon {
+
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+}
+
+
+
+
+
+.bb2Menu{
+
+    position: fixed;
+    top: 15px;
+    background-color: rgba(123, 127, 134, 0.114);
+    width: auto;
+    height: 60px;
+    left: 280px; 
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.098);
+}
+
+
+.bb2Nav {
+
+  flex-direction: row;
+  gap: 0.75rem;
+  padding: 0.5rem 0.5rem;
+}
+
+.bbBtnConexao {
+
+    font-size: 12px;
+    font-family: Ubuntu;
+    font-weight: 500;
+    background-color: #2564eb;
+    color: white;
+    width: 180px;
+    height: 40px;  
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: center;
+    letter-spacing: 0.3px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.471);
+    z-index: 1000;
+}
+
+.bbBtnConexao:hover:not(:disabled) {
+
+    background-color:  rgb(25, 85, 172);  
+    transform: translateY(-1px);  
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.bbBtnConexao:active:not(:disabled) {
+
+    transform: translateY(0);  
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.bbBtnConexao:disabled {
+
+    opacity: 0.5;
+    cursor: not-allowed;
+    background-color: #94a3b8;  
+    box-shadow: none;
+    transform: none;
+}
+
+
+.controlbuttonGreen {
+
+    position: relative;
+    background-color: #61dafb;
+    border-radius: 8px;
+    color: #282c34;
+    cursor: pointer;
+    transition: all 0.3s;
+    width: 180px;
+    height: 40px;
+}
+
+.controlbuttonGreen:hover:not(:disabled) {
+
+    background-color: #4fa8c7;
+    transform: scale(1.05);
+}
+
+.controlbuttonGreen.loading {
+
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+
+.controlbuttonRed {
+
+    position: relative;
+    background-color: #61dafb;
+    border-radius: 8px;
+    color: #282c34;
+    cursor: pointer;
+    transition: all 0.3s;
+    width: 180px;
+    height: 40px;
+}
+
+.controlbuttonRed:hover:not(:disabled) {
+
+    background-color: #4fa8c7;
+    transform: scale(1.05);
+}
+
+.controlbutton.loadingRed {
+
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+
+
+
+.outputs{
+
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    z-index: 1000;
+    gap: 0.75rem
+}
+
+
+.btnOutputs {
+
+    display: flex;
+    flex-direction: row;
+    gap: 10px;         
+    padding: 10px 20px;
+    width: auto;        
+    min-width: max-content; 
+    height: auto;        
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 8px;
+    background: rgb(25, 85, 172);
+    transition: all 0.1s ease;
+    cursor: pointer;
+    color: #fffbfb;
+    font-weight: bold;
+}
+
+
+.btnOutputs:active {
+
+    transform: translateY(5px);
+    box-shadow: 
+        0 2px 0 #b0b0b0,  
+        0 4px 8px rgba(0,0,0,0.2);
+}
+
+.btnEflow1{
+
+    position: relative;
+    top:60px;
+    font-size: 12px;
+    font-family: Ubuntu;
+    font-weight: 500;
+    background-color: #2563eb;
+    color: white;
+    width: 200px;
+    height: 42px;  
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: center;
+    letter-spacing: 0.3px;
+    box-shadow: 0 2px 4px rgba(43, 46, 46, 0.471);
+    z-index: 999;
+}
+
+.btnEflow1:hover{
+  background-color: rgb(25, 85, 172);  
+  transform: translateY(-1px);  
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.471);
+}
+
+.btnEflow1:active {
+  transform: translateY(2px);       
+  background-color: rgb(25, 85, 172);         
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.471);  
+  transition: all 0.05s;              
+}
+
+.btnEflow2{
+  position: relative;
+  top:80px;
+  font-size: 12px;
+  font-family: Ubuntu;
+  font-weight: 500;
+  background-color: #2563eb;
+  color: white;
+  width: 200px;
+  height: 42px;  
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+  letter-spacing: 0.3px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.471);
+  z-index: 999;
+}
+
+.btnEflow2:hover{
+  background-color:  rgb(25, 85, 172);  
+  transform: translateY(-1px);  
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.btnEflow2:active {
+  transform: translateY(2px);       
+  background-color: rgb(25, 85, 172);         
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.471);  
+  transition: all 0.05s;              
+}
+
+.menuAberto {
+  position: relative;
+  width: 160px;
+  background-color: rgba(255, 255, 255, 0.12); 
+  border-radius: 6px; 
+}
+
+
+.rodape {
+
+    background-color: #f0f0f07a;
+    padding: 20px;
+    text-align: center;
+    font-size: 10px;
+    color: #000000;
+    border-bottom: 1px solid #ccc;
+    position: relative;
+    top: 80vh;
+    width: 80%;
+    height: 5px;
+    font-family: Ubuntu;
+}
+
+.hero {
+
+  position: fixed;
+  left: 30%;
+  top: 5%;
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  background-color: #2563eb;
+}
+
+.imagem {
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+}

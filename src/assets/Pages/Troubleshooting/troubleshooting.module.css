@@ -7,11 +7,12 @@
 .tsMenu {
 
   position: fixed;
+  top: 0;
   background-color: rgba(0, 100, 255);
-  width: 160px;
+  width: 170px;
   height: 140vh;
   min-width: 100px;
-  left: 60px; 
+  left: 70px; 
   border-left: none; 
   overflow: hidden;
   z-index: 999;

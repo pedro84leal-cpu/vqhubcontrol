@@ -16,7 +16,9 @@ import { useState } from 'react';
 
 
 
+
 function Ferramentas(){
+
 
     const abrirPrograma = async () => {
     // Verifica se está rodando dentro do Electron
@@ -37,7 +39,7 @@ function Ferramentas(){
         <>
         <div className={styles.toolContainer}>
         <MenuPrincipal/>
-        <div className={styles.toolMenu}>
+        <div className={styles.toolMenu} >
             <header className={styles.toolTitulo}>
                 <h1>
                     Tool's
@@ -50,9 +52,6 @@ function Ferramentas(){
                     <IoChevronBack  className={styles.toolIcon} />
                 </Link>
 
-                 <Link to="/" className={styles.toolLink}>
-                    <IoChevronBack  className={styles.toolIcon} />
-                </Link>
 
        
                 </nav>

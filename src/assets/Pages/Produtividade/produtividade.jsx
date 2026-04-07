@@ -1,4 +1,3 @@
-import { useMenu } from '../../../contexts/MenuContext';
 import { Link } from 'react-router-dom';
 import MenuPrincipal from "../../Components/Menus/menuPrincipal"
 import styles from '../../Pages/Produtividade/produtividade.module.css'
@@ -16,7 +15,6 @@ import MenuITAberto from './ITs/menuIT';
 
 function Prodt(){
     
-    const { larguras, posicoes } = useMenu();
 
     const [menu_comp_Aberto , setmenu_comp_Aberto ] = useState(false)
   
@@ -39,10 +37,7 @@ function Prodt(){
     return(
         <>
         <MenuPrincipal/>    
-        <div className={styles.proMenu} style={{
-                left: `${posicoes.submenu1}px`,
-                width: `${larguras.submenu1Fixo}px`
-            }}>
+        <div className={styles.proMenu}>
             
             <header className={styles.proTitulo}>
                 <h1>

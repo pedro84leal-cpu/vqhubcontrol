@@ -1,63 +1,62 @@
-import styles from './Menu.module.css'
-import BB from '../../Images/botoes/BB.png';
-import Sat from '../../Images/botoes/sate.png';
-import Eflow from '../../Images/botoes/e-flow.png';
+import styles from './mirtilioMenu.module.css'
 import MenuPrincipal from '../../Components/Menus/menuPrincipal';
 import {Link, useNavigate } from 'react-router-dom';
 import { IoChevronBack } from "react-icons/io5";
+import { MdSatelliteAlt } from "react-icons/md";
+import { GiDandelionFlower } from "react-icons/gi";
+import { GiAbstract033 } from "react-icons/gi";
+
+
+
 
 
 
 function MirtilioConsoleMenu() {
+
+
+
     const navigate = useNavigate();
     
   return (
     <>   
         <MenuPrincipal/>
-        <div className={styles.menu}>
-        <header className={styles.titulo}>
+        <div className={styles.mMenu} >
+
+        <header className={styles.mTitulo}>
           <h1>
-            Mirtilo
+            Mirtilio Console
           </h1>
-          <p>
-            Console
-          </p>
-
         </header>
+
         <aside>
-          <nav className={styles.MenuItem}>
+          <nav className={styles.mNav}>
 
-            <Link to="/">
-              <IoChevronBack  className={styles.dashboardIcon} />
+            <Link  to="/" className={styles.mLink}>
+              <IoChevronBack  className={styles.mIcon} />
             </Link>
 
-            <Link to="/blueberry">
-              <img src={BB} className={styles.MenuIcon} alt="BlueBerry"/>
 
-               <div class={styles.textoContainer}>       
+            <Link to="/blueberry" className={styles.mLink}>
+              <GiAbstract033 className={styles.mIcon} />
+              <div class={styles.mTexto}>       
                 <span>teste Power unit's</span>
-                <small className={styles.MenuSubtitulo}>blueberry plus com 4 output's</small>
+                <small className={styles.mSmall}>bb plus com 4 output's</small>
               </div>
-
             </Link>
 
-            <Link to="/satelite">
-              <img src={Sat} className={styles.MenuIcon} alt="Satélites"/>
-
-              <div className={styles.textoContainer}>
+            <Link to="/" className={styles.mLink}>
+              <MdSatelliteAlt className={styles.mIcon} />
+              <div className={styles.mTexto}>
                 <span>teste de satélites</span>
-                <small className={styles.MenuSubtitulo}>satélite - satélite coled </small>
+                <small className={styles.mSmall}>satélite - satélite coled </small>
               </div>
-
             </Link>
 
-            <Link to="/eflow">  
-              <img src={Eflow} className={styles.MenuIcon} alt="e-Flow"/>
-          
-              <div className={styles.textoContainer}>
+            <Link to="/" className={styles.mLink}>  
+              <GiDandelionFlower className={styles.mIcon} />
+              <div className={styles.mTexto}>
                 <span>teste e-flow</span>
-              </div>
-                        
+              </div>            
             </Link>
  
           </nav>

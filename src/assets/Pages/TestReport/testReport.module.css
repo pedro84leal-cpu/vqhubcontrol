@@ -1,11 +1,11 @@
-.proContainer {
+.repoContainer {
 
   padding: 1rem;
   transition: margin-left 0.3s ease;
 
 }
 
-.proMenu {
+.repoMenu {
 
   position: fixed;
   top: 0;
@@ -13,6 +13,7 @@
   flex-direction: column;
   transition: width 0.3s ease;
   background-color: rgba(0, 100, 255);
+  width: var(--menu-width-fechado);
   height: 100vh;
   width: 170px;
   left: 70px; 
@@ -25,7 +26,7 @@
 
 
 
-.proTitulo {
+.repoTitulo {
 
   text-align: center;
   color: white;
@@ -38,7 +39,7 @@
 }
 
 
-.proNav {
+.repoNav {
 
 
 
@@ -48,7 +49,7 @@
 }
 
 
-.proLink {
+.repoLink {
 
   display: flex;
   align-items: center;
@@ -61,18 +62,20 @@
   white-space: nowrap;
 }
 
-.proLink:hover {
+
+.repoLink:hover {
   background-color: rgba(255, 255, 255, 0.15);
 }
 
-.proIcon {
-  
+
+.repoIcon {
   width: 22px;
   height: 22px;
   flex-shrink: 0;
 }
 
-.proLink span {
+
+.repoLink span {
 
     font-size: 0.7rem;
     font-family: Ubuntu, sans-serif;
@@ -83,12 +86,12 @@
     
 }
 
-.proMenu:hover .webLink span {
+.repoMenu:hover .webLink span {
   opacity: 1;
 }
 
 
-.proIcon {
+.repoIcon {
   width: 22px;
   height: 22px;
   flex-shrink: 0;

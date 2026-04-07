@@ -6,13 +6,16 @@ import { IoChevronBack } from "react-icons/io5";
 
 
 
+
 function Troubleshooting(){
+
+    
 
     return(
            <>
         <div className={styles.tsContainer}>
         <MenuPrincipal/>
-        <div className={styles.tsMenu}>
+        <div className={styles.tsMenu} >
             <header className={styles.tsTitulo}>
                 <h1>
                     Troubleshooting

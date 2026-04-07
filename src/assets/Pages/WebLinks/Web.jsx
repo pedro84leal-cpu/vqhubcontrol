@@ -13,12 +13,10 @@ import { FaCodeCompare } from "react-icons/fa6";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import Menu_Ecog from '../WebLinks/MenuEcog'
 import { useState } from 'react';
-import { useMenu } from '../../../contexts/MenuContext';
+
 
 
 function Web(){
-
-    const { larguras, posicoes } = useMenu();
 
     const [menu_ecog_Aberto , setmenu_ecog_Aberto ] = useState(false)
   
@@ -30,10 +28,7 @@ function Web(){
         <>
         <div className={styles.webContainer}>
         <MenuPrincipal/>
-        <div className={styles.webMenu} style={{
-                left: `${posicoes.submenu1}px`,
-                width: `${larguras.submenu1Fixo}px`
-            }}>
+        <div className={styles.webMenu} >
             <header className={styles.webTitulo}>
                 <h1>
                     Web link's

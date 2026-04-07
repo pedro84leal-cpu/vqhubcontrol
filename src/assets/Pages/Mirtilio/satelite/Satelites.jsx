@@ -4,12 +4,12 @@ import styles from './Menu.module.css'
 import BB from '../../Images/botoes/BB.png';
 import Sat from '../../Images/botoes/sate.png';
 import Eflow from '../../Images/botoes/e-flow.png';
-import MenuPrincipal from '../../Components/Menus/menuPrincipal';
-import imgEflow from '../../Images/carregadores/eflow.jpg';
+import MenuPrincipal from '../../../Components/Menus/menuPrincipal';
+import imgSat from '../../Images/carregadores/satelites.jpg';
 
 
 
-function E_flow() {
+function Satelite() {
   
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState('');
@@ -109,8 +109,7 @@ function E_flow() {
   
   return (
     <>
-    
-      <MenuPrincipal/>
+     <MenuPrincipal/>
       <div className={styles.menu}>
         <header className={styles.titulo}>
           <h1>
@@ -146,13 +145,13 @@ function E_flow() {
 
             <Link to="/eflow">  
               <img src={Eflow} className={styles.MenuIcon} alt="e-Flow"/>
-
+           
               <div className={styles.textoContainer}>
                 <span>teste e-flow</span>
               </div>
-              
+                         
             </Link>
-            
+ 
           </nav>
         </aside>
 
@@ -181,17 +180,9 @@ function E_flow() {
           display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '5px', color: 'white' }}>
           {loading ? '...' : 'OFF'}
         </button>
-     
-        <button className={styles.btnEflow1} onClick={() => handleOutputClick(1)}>
-          Satélites
-        </button>
 
-        <button className={styles.btnEflow2} onClick={() => handleOutputClick(1)}>
-          e-flow
-        </button>
-  
         <div className={styles.imagem}>
-           <img src={imgEflow} className={styles.imgStyle} alt="Satélites"/>
+           <img src={imgSat} className={styles.imgStyle} alt="Satélites"/>
         </div>
 
         </div>
@@ -201,11 +192,11 @@ function E_flow() {
             </div>
             )}
            </footer>
-        <div className={styles.container}>
-          
-        </div>
+
+      <div className={styles.container}>
+      </div>
     </>
   );
 }
 
-export default E_flow;
+export default Satelite;

@@ -1,5 +1,5 @@
 import React from 'react';
-import BBLigado from '../../Images/carregadores/BB-Ligado.jpg'; 
+import BBLigado from '../../../Images/carregadores/BB-Ligado.jpg'; 
 import BBDesligado from '../../Images/carregadores/BB-desligado.jpg';
 
 

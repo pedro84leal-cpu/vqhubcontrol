@@ -1,4 +1,3 @@
-import { useMenu } from '../../../contexts/MenuContext'
 import { Link } from 'react-router-dom'; 
 import styles from '../Menus/menuPrincipal.module.css'
 import { PiLinkSimpleBold } from "react-icons/pi";
@@ -11,20 +10,11 @@ import { VscTools } from "react-icons/vsc";
 
 
 function MenuPrincipal() {
-  const { menuPrincipalAberto, 
-          setMenuPrincipalAberto, 
-          setSubmenu1Aberto, 
-          larguras, posicoes 
-        } = useMenu();
+
 
   return (
     <>
-      <div className={styles.menu}    style={{
-                width: `${larguras.menuPrincipalAtual}px`,
-                left: `${posicoes.menuPrincipal}px`
-            }}
-            onMouseEnter={() => setMenuPrincipalAberto(true)}
-            onMouseLeave={() => setMenuPrincipalAberto(false)}>
+      <div className={styles.menu}>
 
         <header className={styles.titulo}>
             <h1>

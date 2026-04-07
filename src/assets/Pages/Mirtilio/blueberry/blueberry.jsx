@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom'; 
-import styles from './Menu.module.css'
-import BB from '../../Images/botoes/BB.png';
-import Sat from '../../Images/botoes/sate.png';
-import Eflow from '../../Images/botoes/e-flow.png';
-import ImagemEstado from './imagBlueberry.tsx';
-import MenuPrincipal from '../../Components/Menus/menuPrincipal.jsx';
+import styles from '../../Mirtilio/blueberry/bb.module.css'
+import MenuPrincipal from '../../../Components/Menus/menuPrincipal.jsx';
+import { MdSatelliteAlt } from "react-icons/md";
+import { GiDandelionFlower } from "react-icons/gi";
+import { GiAbstract033 } from "react-icons/gi";
+import { IoChevronBack } from "react-icons/io5";
+import BBimg from '../../../Images/ImagemEq/blueberry.jpg'
 
 
 function Blueberry() {
@@ -121,83 +122,81 @@ function Blueberry() {
     <>    
       <MenuPrincipal/>
 
-      <div className={styles.menu}>
-        <header className={styles.titulo}>
+      <div className={styles.bbMenu}>
+
+        <header className={styles.bbTitulo}>
           <h1>
-            Mirtilo
+            Teste PU's
           </h1>
-          <p>
-            Console
-          </p>
-
+          <span className={styles.ledONOFF} >
+            {connected ? '🟢' : '🔴'} 
+          </span> 
+       
         </header>
+
         <aside>
-          <nav className={styles.MenuItem}>
+        <nav className={styles.bbNav}>
 
-            <Link to="/blueberry" onClick={(e) => {e.preventDefault();ativarPino(33, "/blueberry");}}>
-              <img src={BB} className={styles.MenuIcon} alt="BlueBerry"/>
+          <Link  to="/" className={styles.bbLink}>
+            <IoChevronBack  className={styles.bbIcon} />
+          </Link>
 
-               <div class={styles.textoContainer}>       
-                <span>teste Power unit's</span>
-                <small className={styles.MenuSubtitulo}>blueberry plus com 4 output's</small>
-              </div>
+          <Link to="/blueberry" onClick={(e) => {e.preventDefault();ativarPino(33, "/blueberry");}} className={styles.bbLink}>
+            <GiAbstract033 className={styles.bbIcon} />
+            <div class={styles.bbTexto}>       
+              <span>teste Power unit's</span>
+              <small className={styles.bbSmall}>bb plus com 4 output's</small>
+              
+            </div>
+          </Link>
 
-            </Link>
+          <Link to="/satelite" onClick={() => desativarPino(33)} className={styles.bbLink} >
+            <MdSatelliteAlt className={styles.bbIcon} />
+            <div className={styles.bbTexto}>
+              <span>teste de satélites</span>
+              <small className={styles.bbSmall}>4 - output's externas </small>
+            </div>
+          </Link>
 
-            <Link to="/satelite" onClick={() => desativarPino(33)} >
-              <img src={Sat} className={styles.MenuIcon} alt="Satélites"/>
-
-              <div className={styles.textoContainer}>
-                <span>teste de satélites</span>
-                <small className={styles.MenuSubtitulo}>4 - output's externas </small>
-              </div>
-
-            </Link>
-
-            <Link to="/eflow">  
-              <img src={Eflow} className={styles.MenuIcon} alt="e-Flow"/>
-          
-              <div className={styles.textoContainer}>
-                <span>teste e-flow</span>
-              </div>
-                        
-            </Link>
+          <Link to="/eflow" className={styles.bbLink}>  
+            <GiDandelionFlower className={styles.bbIcon} />          
+            <div className={styles.bbTexto}>
+              <span>teste e-flow</span>
+            </div>                        
+          </Link>
  
-          </nav>
+        </nav>
         </aside>
+      </div>
+      <div className={styles.bb2Menu}>
 
-        <button onClick={testarConexao} className={styles.MenubtnConexao} disabled={loading}>
-          Verificar Conexão
-        </button>
+        <nav className={styles.bb2Nav}>
 
-        <span className={styles.ledONOFF} >
-          {connected ? '🟢' : '🔴'} 
-        </span> 
-        
-        <button className={styles.controlbuttonGreen} onClick={ativarPino} disabled={loading || !connected || pinoEstado === 'ON'}
-          style={{ fontSize: '14px', fontFamily: 'monospace' ,
-          backgroundColor: pinoEstado === 'ON' ? '#ccc' : '#4CAF50',
-          cursor: (loading || !connected || pinoEstado === 'ON') ? 'not-allowed' : 'pointer',
-          display: 'flex', alignItems: 'center', justifyContent: 'center', textAlign: 'center',
-          color: 'white'}}>
-          {loading ? '...' : 'ON'}
-        </button>
+          <button onClick={testarConexao} className={styles.bbBtnConexao} disabled={loading}>
+            Verificar Conexão
+          </button>
+         
 
-        <button className={styles.controlbuttonRed} onClick={() => desativarPino(33)} 
-          disabled={loading || !connected || pinoEstado === 'OFF'}
-          style={{fontSize: '14px', fontFamily: 'monospace',
-          backgroundColor: pinoEstado === 'OFF' ? '#ccc' : '#f44336',
-          cursor: (loading || !connected || pinoEstado === 'OFF') ? 'not-allowed' : 'pointer',
-          display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '5px', color: 'white' }}>
-          {loading ? '...' : 'OFF'}
-        </button>
+          <button className={styles.controlbuttonGreen} onClick={ativarPino} disabled={loading || !connected || pinoEstado === 'ON'}
+            style={{ fontSize: '14px', fontFamily: 'monospace' ,
+            backgroundColor: pinoEstado === 'ON' ? '#ccc' : '#4CAF50',
+            cursor: (loading || !connected || pinoEstado === 'ON') ? 'not-allowed' : 'pointer',
+            display: 'flex', alignItems: 'center', justifyContent: 'center', textAlign: 'center',
+            color: 'white'}}>
+            {loading ? '...' : 'ON'}
+          </button>
 
-        <div className={styles.imagem}>
-           <ImagemEstado estado={pinoEstado} loading={loading}/>
-        </div>
+          <button className={styles.controlbuttonRed} onClick={() => desativarPino(33)} 
+            disabled={loading || !connected || pinoEstado === 'OFF'}
+            style={{fontSize: '14px', fontFamily: 'monospace',
+            backgroundColor: pinoEstado === 'OFF' ? '#ccc' : '#f44336',
+            cursor: (loading || !connected || pinoEstado === 'OFF') ? 'not-allowed' : 'pointer',
+            display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '5px', color: 'white' }}>
+            {loading ? '...' : 'OFF'}
+          </button>
 
-        {pinoEstado === 'ON' && (
-          <div className={styles.outputs} style={{display: 'flex', flexDirection: 'column',gap: '17px', alignItems: 'center'}}>
+          {pinoEstado === 'OFF' && (
+          <div className={styles.outputs}>
 
             <button className={styles.btnOutputs} onClick={() => handleOutputClick(1)}
               style={{boxShadow: outputAtivo === 1 ? '0 5px 0 #4CAF50, 0 8px 8px rgba(76, 175, 80, 0.5)' 
@@ -223,20 +222,13 @@ function Blueberry() {
                 OUTPUT 4
             </button>
           </div>
-        )}
-
-        </div>
-          <footer className={styles.rodape}> {message && (
-            <div style={{ whiteSpace: 'pre-line', gap:'50px'}}>
-              {message}IP: 192.168.1.76 | mDNS: {ESP_NAME}
-            </div>
-            )}
-           </footer>
-
-        <div className={styles.container}>
-
-
-        </div>
+          )}
+        </nav>      
+      </div>
+      
+      <div className={styles.hero}>
+          <img src={BBimg} alt='bb'  className={styles.imagem}  />
+      </div>  
     </>
   );
 }
