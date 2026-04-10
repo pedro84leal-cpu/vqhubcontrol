@@ -1,12 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom'; 
 import styles from '../../Mirtilio/blueberry/bb.module.css'
 import MenuPrincipal from '../../../Components/Menus/menuPrincipal.jsx';
-import { MdSatelliteAlt } from "react-icons/md";
-import { GiDandelionFlower } from "react-icons/gi";
-import { GiAbstract033 } from "react-icons/gi";
-import { IoChevronBack } from "react-icons/io5";
+import PUimg from '../../../Images/ImagemEq/PU300.jpg'
 import BBimg from '../../../Images/ImagemEq/blueberry.jpg'
+import MirtilioConsoleMenu from '../MirtilioConsoleMenu.jsx';
 
 
 function Blueberry() {
@@ -121,59 +118,23 @@ function Blueberry() {
   return (
     <>    
       <MenuPrincipal/>
+      <MirtilioConsoleMenu />
 
-      <div className={styles.bbMenu}>
-
-        <header className={styles.bbTitulo}>
-          <h1>
-            Teste PU's
-          </h1>
-          <span className={styles.ledONOFF} >
-            {connected ? '🟢' : '🔴'} 
-          </span> 
-       
-        </header>
-
-        <aside>
-        <nav className={styles.bbNav}>
-
-          <Link  to="/" className={styles.bbLink}>
-            <IoChevronBack  className={styles.bbIcon} />
-          </Link>
-
-          <Link to="/blueberry" onClick={(e) => {e.preventDefault();ativarPino(33, "/blueberry");}} className={styles.bbLink}>
-            <GiAbstract033 className={styles.bbIcon} />
-            <div class={styles.bbTexto}>       
-              <span>teste Power unit's</span>
-              <small className={styles.bbSmall}>bb plus com 4 output's</small>
-              
-            </div>
-          </Link>
-
-          <Link to="/satelite" onClick={() => desativarPino(33)} className={styles.bbLink} >
-            <MdSatelliteAlt className={styles.bbIcon} />
-            <div className={styles.bbTexto}>
-              <span>teste de satélites</span>
-              <small className={styles.bbSmall}>4 - output's externas </small>
-            </div>
-          </Link>
-
-          <Link to="/eflow" className={styles.bbLink}>  
-            <GiDandelionFlower className={styles.bbIcon} />          
-            <div className={styles.bbTexto}>
-              <span>teste e-flow</span>
-            </div>                        
-          </Link>
+      <section className={styles.stTitulo}>
+        <h1>
+            Teste Power unit's
+        </h1>
+      </section>
  
-        </nav>
-        </aside>
-      </div>
       <div className={styles.bb2Menu}>
 
         <nav className={styles.bb2Nav}>
 
           <button onClick={testarConexao} className={styles.bbBtnConexao} disabled={loading}>
             Verificar Conexão
+            <span className={styles.ledONOFF} >
+            {connected ? '🟢' : '🔴'} 
+          </span> 
           </button>
          
 
@@ -196,39 +157,98 @@ function Blueberry() {
           </button>
 
           {pinoEstado === 'OFF' && (
-          <div className={styles.outputs}>
+            <div className={styles.outputs}>
 
-            <button className={styles.btnOutputs} onClick={() => handleOutputClick(1)}
-              style={{boxShadow: outputAtivo === 1 ? '0 5px 0 #4CAF50, 0 8px 8px rgba(76, 175, 80, 0.5)' 
+              <div className={styles.grid}>
+                <div id="item1"  style={{boxShadow: outputAtivo === 2 ? 
+                  '0 0 15px rgba(76, 175, 80, 0.3), 0 0 5px rgba(76, 175, 79, 0.2)' : 'none'}}>
+                  <h1 className={styles.h1}>
+                    Plug 2
+                  </h1>
+                  <p style={{color: outputAtivo === 2 ? 'rgb(76, 175, 79)' : 'rgba(66, 70, 66, 0)', padding: '10px', fontSize:'0.8rem'}}>
+                    Available
+                  </p>
+                </div>
+
+                <div id="item2"style={{boxShadow: outputAtivo === 1 ? 
+                  '0 0 15px rgba(76, 175, 80, 0.3), 0 0 5px rgba(76, 175, 80, 0.2)' : 'none'}}>
+                  <h1 className={styles.h1}>
+                    Plug 1
+                  </h1>
+                  <p style={{color: outputAtivo === 1 ? 'rgb(76, 175, 79)' : 'rgba(66, 70, 66, 0)', padding: '10px', fontSize:'0.8rem'}}>
+                    Available
+                  </p>
+                </div>
+
+                <div id="item3" style={{boxShadow: outputAtivo === 4 ? 
+                  '0 0 15px rgba(76, 175, 80, 0.3), 0 0 5px rgba(76, 175, 80, 0.2)' : 'none'}}>
+                  <h1 className={styles.h1}>
+                    Plug 4
+                  </h1>
+                  <p style={{color: outputAtivo === 4 ? 'rgb(76, 175, 79)' : 'rgba(66, 70, 66, 0)', padding: '10px', fontSize:'0.8rem'}}>
+                    Available
+                  </p>
+                </div>
+
+                <div id="item3" style={{boxShadow: outputAtivo === 3 ? 
+                  '0 0 15px rgba(76, 175, 80, 0.3), 0 0 5px rgba(76, 175, 80, 0.2)' : 'none'}}>
+                  <h1 className={styles.h1}>
+                    Plug 3
+                  </h1>
+                  <p style={{color: outputAtivo === 3 ? 'rgb(76, 175, 79)' : 'rgba(66, 70, 66, 0)', padding: '10px', fontSize:'0.8rem'}}>
+                   Available
+                  </p>
+                </div>
+              </div>
+
+              <button className={styles.btnOutputs} onClick={() => handleOutputClick(1)}
+                style={{boxShadow: outputAtivo === 1 ? '0 5px 0 #4CAF50, 0 8px 8px rgba(76, 175, 80, 0.5)' 
                   : '0 5px 0 #8a878783, 0 8px 8px rgb(160, 151, 151)'}}>
                   OUTPUT 1
-            </button>
+              </button>
 
-            <button className={styles.btnOutputs} onClick={() => handleOutputClick(2)}
-              style={{boxShadow: outputAtivo === 2 ? '0 5px 0 #4CAF50, 0 8px 8px rgb(76, 175, 0.5)'
+              <button className={styles.btnOutputs} onClick={() => handleOutputClick(2)}
+                style={{boxShadow: outputAtivo === 2 ? '0 5px 0 #4CAF50, 0 8px 8px rgb(76, 175, 0.5)'
                 : '0 5px 0 #8a878783, 0 8px 8px rgb(160, 151, 151)'}}>
                 OUTPUT 2
-            </button>
+              </button>
 
-            <button className={styles.btnOutputs} onClick={() => handleOutputClick(3)}
-              style={{ boxShadow: outputAtivo === 3 ? '0 5px 0 #4CAF50, 0 8px 8px rgba(76, 175, 80, 0.5)'
+              <button className={styles.btnOutputs} onClick={() => handleOutputClick(3)}
+                style={{ boxShadow: outputAtivo === 3 ? '0 5px 0 #4CAF50, 0 8px 8px rgba(76, 175, 80, 0.5)'
                 : '0 5px 0 #8a878783, 0 8px 8px rgb(160, 151, 151)'}}>
                 OUTPUT 3
-            </button>
+              </button>
 
-            <button className={styles.btnOutputs} onClick={() => handleOutputClick(4)}
-              style={{ boxShadow: outputAtivo === 4 ? '0 5px 0 #4CAF50, 0 8px 8px rgba(76, 175, 80, 0.5)'
+              <button className={styles.btnOutputs} onClick={() => handleOutputClick(4)}
+                style={{ boxShadow: outputAtivo === 4 ? '0 5px 0 #4CAF50, 0 8px 8px rgba(76, 175, 80, 0.5)'
                 : '0 5px 0 #8a878783, 0 8px 8px rgb(160, 151, 151)'}}>
                 OUTPUT 4
-            </button>
-          </div>
+              </button>
+
+              <section className={styles.hero}>
+                <img src={PUimg} alt='bb'  className={styles.imagem} />
+                <span className={styles.spamPU} >
+                  equipment under test
+                </span>        
+              </section>  
+            </div>
           )}
         </nav>      
       </div>
-      
-      <div className={styles.hero}>
-          <img src={BBimg} alt='bb'  className={styles.imagem}  />
-      </div>  
+
+      <section className={styles.hero2}>
+        <img src={BBimg} alt='bb'  className={styles.imagem2} />
+        <p className={styles.spamBB} >
+          Test equipment
+        </p>        
+      </section>
+
+      <footer className={styles.rodape}> {message && (
+        <div >
+          {message}IP: 192.168.1.76 | mDNS: {ESP_NAME}
+        </div>
+        )}
+      </footer>
     </>
   );
 }

@@ -9,6 +9,11 @@ import Ferramentas from './assets/Pages/Ferramentas/ferramentas';
 import Prodt from './assets/Pages/Produtividade/produtividade';
 import TestReport from './assets/Pages/TestReport/testReport';
 import Blueberry from './assets/Pages/Mirtilio/blueberry/blueberry';
+import './App.css'
+import E_flow from './assets/Pages/Mirtilio/eflow/E_flow';
+import Satelite from './assets/Pages/Mirtilio/satelite/Satelites';
+import SateliteColed from './assets/Pages/Mirtilio/satelitesColed/satColed';
+import Planeamento from './assets/Pages/Dashboard/Dashboard-Pages/Planeamento/planeamento';
 
 
 
@@ -28,6 +33,10 @@ function App() {
         <Route path='/tools' element={<Ferramentas />} />
         <Route path='/prodt' element={<Prodt />} />
         <Route path='/test-report' element={<TestReport />} />
+        <Route path='/eflow' element={<E_flow />} />
+        <Route path='/sat' element={<Satelite />} />
+        <Route path='/satColed' element={<SateliteColed />} />
+        <Route path='/planeamento' element={<Planeamento />} />
       </Routes>
   );
 }

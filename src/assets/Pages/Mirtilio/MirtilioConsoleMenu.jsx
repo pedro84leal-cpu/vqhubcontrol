@@ -1,10 +1,12 @@
 import styles from './mirtilioMenu.module.css'
 import MenuPrincipal from '../../Components/Menus/menuPrincipal';
-import {Link, useNavigate } from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import { IoChevronBack } from "react-icons/io5";
 import { MdSatelliteAlt } from "react-icons/md";
 import { GiDandelionFlower } from "react-icons/gi";
 import { GiAbstract033 } from "react-icons/gi";
+import { SiSatellite } from "react-icons/si";
+
 
 
 
@@ -13,14 +15,12 @@ import { GiAbstract033 } from "react-icons/gi";
 
 function MirtilioConsoleMenu() {
 
-
-
-    const navigate = useNavigate();
-    
+  
   return (
     <>   
-        <MenuPrincipal/>
-        <div className={styles.mMenu} >
+      <MenuPrincipal/>
+        
+      <div className={styles.mMenu} >
 
         <header className={styles.mTitulo}>
           <h1>
@@ -44,15 +44,21 @@ function MirtilioConsoleMenu() {
               </div>
             </Link>
 
-            <Link to="/" className={styles.mLink}>
+            <Link to="/sat" className={styles.mLink}>
               <MdSatelliteAlt className={styles.mIcon} />
               <div className={styles.mTexto}>
                 <span>teste de satélites</span>
-                <small className={styles.mSmall}>satélite - satélite coled </small>
               </div>
             </Link>
 
-            <Link to="/" className={styles.mLink}>  
+            <Link to="/satColed" className={styles.mLink}>  
+              <SiSatellite  className={styles.mIcon} />
+              <div className={styles.mTexto}>
+                <span>teste satélites cooled</span>
+              </div>            
+            </Link>
+
+            <Link to="/eflow" className={styles.mLink}>  
               <GiDandelionFlower className={styles.mIcon} />
               <div className={styles.mTexto}>
                 <span>teste e-flow</span>
@@ -61,12 +67,7 @@ function MirtilioConsoleMenu() {
  
           </nav>
         </aside>
-        </div>
-
-    <div className={styles.container}>
-
-
-    </div>
+      </div>
   </>
   );
 }

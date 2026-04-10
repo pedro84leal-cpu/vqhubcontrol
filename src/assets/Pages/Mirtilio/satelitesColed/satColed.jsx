@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import styles from './sat.module.css'
+import styles from './satColed.module.css'
 import MenuPrincipal from '../../../Components/Menus/menuPrincipal';
-import PUimg from '../../../Images/ImagemEq/satellite.png'
-import BBimg from '../../../Images/ImagemEq/blueberry.jpg'
+import PUimg from '../../../Images/ImagemEq/satellite cooled.png'
+import BBimg from '../../../Images/ImagemEq/e-flow.jpg'
 import MirtilioConsoleMenu from '../MirtilioConsoleMenu';
 
 
 
 
 
-function Satelite() {
+function SateliteColed() {
   
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState('');
@@ -112,25 +112,25 @@ function Satelite() {
       <MenuPrincipal/>
       <MirtilioConsoleMenu />
 
-      <section className={styles.st_Titulo}>
+      <section className={styles.stc_Titulo}>
         <h1>
-            Teste Satélites
+            Teste Satélites cooled
         </h1>
       </section>
  
-      <div className={styles.st_Menu}>
+      <div className={styles.stc_Menu}>
 
-        <nav className={styles.st_Nav}>
+        <nav className={styles.stc_Nav}>
 
-          <button onClick={testarConexao} className={styles.st_Conex} disabled={loading}>
+          <button onClick={testarConexao} className={styles.stc_Conex} disabled={loading}>
             Verificar Conexão
-            <span className={styles.st_Led} >
+            <span className={styles.stc_Led} >
             {connected ? '🟢' : '🔴'} 
           </span> 
           </button>
          
 
-          <button className={styles.st_Btn_Green} onClick={ativarPino} disabled={loading || !connected || pinoEstado === 'ON'}
+          <button className={styles.stc_Btn_Green} onClick={ativarPino} disabled={loading || !connected || pinoEstado === 'ON'}
             style={{ fontSize: '14px', fontFamily: 'monospace' ,
             backgroundColor: pinoEstado === 'ON' ? '#ccc' : '#4CAF50',
             cursor: (loading || !connected || pinoEstado === 'ON') ? 'not-allowed' : 'pointer',
@@ -139,7 +139,7 @@ function Satelite() {
             {loading ? '...' : 'ON'}
           </button>
 
-          <button className={styles.st_Btn_Red} onClick={() => desativarPino(33)} 
+          <button className={styles.stc_Btn_Red} onClick={() => desativarPino(33)} 
             disabled={loading || !connected || pinoEstado === 'OFF'}
             style={{fontSize: '14px', fontFamily: 'monospace',
             backgroundColor: pinoEstado === 'OFF' ? '#ccc' : '#f44336',
@@ -150,9 +150,9 @@ function Satelite() {
 
           {pinoEstado === 'OFF' && (
           
-          <section className={styles.st_Hero}>
-            <img src={PUimg} alt='bb'  className={styles.st_Imagem} />
-            <span className={styles.st_SpamPU} >
+          <section className={styles.stc_Hero}>
+            <img src={PUimg} alt='bb'  className={styles.stc_Imagem} />
+            <span className={styles.stc_SpamPU} >
               equipment under test
             </span>        
           </section> 
@@ -161,14 +161,14 @@ function Satelite() {
         </nav>      
       </div>
 
-      <section className={styles.st_Hero2}>
-        <img src={BBimg} alt='bb'  className={styles.st_Imagem2} />
-        <p className={styles.st_SpamBB} >
+      <section className={styles.stc_Hero2}>
+        <img src={BBimg} alt='bb'  className={styles.stc_Imagem2} />
+        <p className={styles.stc_SpamBB} >
           Test equipment
         </p>        
       </section>
 
-      <footer className={styles.st_Rodape}> {message && (
+      <footer className={styles.stc_Rodape}> {message && (
         <div >
           {message}IP: 192.168.1.76 | mDNS: {ESP_NAME}
         </div>
@@ -178,4 +178,4 @@ function Satelite() {
   );
 }
 
-export default Satelite;
+export default SateliteColed;

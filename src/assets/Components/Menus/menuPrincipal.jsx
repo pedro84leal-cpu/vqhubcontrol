@@ -64,10 +64,6 @@ function MenuPrincipal() {
     
         </nav>
       </div>     
-
-      <div className={styles.container}>
-        {/* Conteúdo das páginas aqui */}
-      </div>
     </>
   );
 }

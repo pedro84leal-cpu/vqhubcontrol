@@ -1,121 +1,264 @@
 import MenuPrincipal from "../../../Components/Menus/menuPrincipal"
 import Dashboard from "../dashboard"
-import styles from './tab.module.css'
+import styles from './gestao.module.css'
+import { useState } from 'react';
 
 
 
 function Gestao(){
 
+    const [botao1_aberto, setboato1_aberto] = useState(true);
+
+    const abreMenu1 = () => {
+        setboato1_aberto(!botao1_aberto);
+    };
+
     return(
 
-        <div className={styles.conteiner}>
-            <MenuPrincipal/>
-            <Dashboard/>
+        <>
+        <MenuPrincipal/>
+        <Dashboard/>
+        <header className={styles.header}>
+            <h1 className={styles.titulo}>
+                Gestão de linha
+            </h1>
 
-            <div className={styles.tabConfg}>
-                <header className={styles.header}>
-                    <h1>
-                        Configurações
+        </header>
+       
+            <div className={styles.container}>
+                <div className={styles.card}>
+                    <h1 className={styles.card_text}>
+                        Tecnico:
                     </h1>
-                </header>
-                <div className={styles.line1}>
-                    <h1 className={styles.lineHeader}>
+                    <h1 className={styles.card_text}>
+                        OF:
+                    </h1>
+                    <h1 className={styles.card_text}>
+                        SN:
+                    </h1>
+                </div>
+                <div className={styles.card}>
+                    <h1 className={styles.card_text}>
+                        Tecnico:
+                    </h1>
+                    <h1 className={styles.card_text}>
+                        OF:
+                    </h1>
+                    <h1 className={styles.card_text}>
+                        SN:
+                    </h1>
+                </div>
+                  <div className={styles.card}>
+                    <h1 className={styles.card_text}>
+                        Tecnico:
+                    </h1>
+                    <h1 className={styles.card_text}>
+                        OF:
+                    </h1>
+                    <h1 className={styles.card_text}>
+                        SN:
+                    </h1>
+                </div>
+                  <div className={styles.card}>
+                    <h1 className={styles.card_text}>
+                        Temperatura:
+                    </h1>
+                    <h1 className={styles.card_text}>
+                        Tempo carga:
+                    </h1>
+                    <h1 className={styles.card_text}>
+                        Info:
+                    </h1>
+                </div>
+                  <div className={styles.card}>
+                    <h1 className={styles.card_text}>
+                        Tecnico:
+                    </h1>
+                    <h1 className={styles.card_text}>
+                        OF:
+                    </h1>
+                    <h1 className={styles.card_text}>
+                        SN:
+                    </h1>
+                </div>
+                  <div className={styles.card}>
+                    <h1 className={styles.card_text}>
+                        Tecnico:
+                    </h1>
+                    <h1 className={styles.card_text}>
+                        OF:
+                    </h1>
+                    <h1 className={styles.card_text}>
+                        SN:
+                    </h1>
+                </div>
+                  <div className={styles.card}>
+                    <h1 className={styles.card_text}>
+                        Tecnico:
+                    </h1>
+                    <h1 className={styles.card_text}>
+                        OF:
+                    </h1>
+                    <h1 className={styles.card_text}>
+                        SN:
+                    </h1>
+                </div>
+               <div className={styles.card}>
+                    <h1 className={styles.card_text}>
+                        Temperatura:
+                    </h1>
+                    <h1 className={styles.card_text}>
+                        Tempo carga:
+                    </h1>
+                    <h1 className={styles.card_text}>
+                        Info:
+                    </h1>
+                </div>
+                  <div className={styles.card}>
+                    <h1 className={styles.card_text}>
+                        Tecnico:
+                    </h1>
+                    <h1 className={styles.card_text}>
+                        OF:
+                    </h1>
+                    <h1 className={styles.card_text}>
+                        SN:
+                    </h1>
+                </div>
+                  <div className={styles.card}>
+                    <h1 className={styles.card_text}>
+                        Tecnico:
+                    </h1>
+                    <h1 className={styles.card_text}>
+                        OF:
+                    </h1>
+                    <h1 className={styles.card_text}>
+                        SN:
+                    </h1>
+                </div>
+                  <div className={styles.card}>
+                    <h1 className={styles.card_text}>
+                        Tecnico:
+                    </h1>
+                    <h1 className={styles.card_text}>
+                        OF:
+                    </h1>
+                    <h1 className={styles.card_text}>
+                        SN:
+                    </h1>
+                </div>
+               <div className={styles.card}>
+                    <h1 className={styles.card_text}>
+                        Temperatura:
+                    </h1>
+                    <h1 className={styles.card_text}>
+                        Tempo carga:
+                    </h1>
+                    <h1 className={styles.card_text}>
+                        Info:
+                    </h1>
+                </div>
+                  <div className={styles.card}>
+                    <h1 className={styles.card_text}>
+                        Tecnico:
+                    </h1>
+                    <h1 className={styles.card_text}>
+                        OF:
+                    </h1>
+                    <h1 className={styles.card_text}>
+                        SN:
+                    </h1>
+                </div>
+                  <div className={styles.card}>
+                    <h1 className={styles.card_text}>
+                        Tecnico:
+                    </h1>
+                    <h1 className={styles.card_text}>
+                        OF:
+                    </h1>
+                    <h1 className={styles.card_text}>
+                        SN:
+                    </h1>
+                </div>
+                  <div className={styles.card}>
+                    <h1 className={styles.card_text}>
+                        Tecnico:
+                    </h1>
+                    <h1 className={styles.card_text}>
+                        OF:
+                    </h1>
+                    <h1 className={styles.card_text}>
+                        SN:
+                    </h1>
+                </div>
+              <div className={styles.card}>
+                    <h1 className={styles.card_text}>
+                        Temperatura:
+                    </h1>
+                    <h1 className={styles.card_text}>
+                        Tempo carga:
+                    </h1>
+                    <h1 className={styles.card_text}>
+                        Info:
+                    </h1>
+                </div>
+            
+            </div>
+
+            <div className={styles.lines}>
+                <asside className={styles.line}>
+                    <h1>
                         1
                     </h1>
-                </div>
-
-                <div className={styles.line2}>
-                </div>
-
-                <div className={styles.line3}>
-                </div>
-
-                <div className={styles.line4}>
-                </div>
-
+                      <h1>
+                        2
+                    </h1>
+                      <h1>
+                        3
+                    </h1>
+                      <h1>
+                        4
+                    </h1>
+                </asside>
             </div>
 
-            <div className={styles.tabBuf1}>
-                <header className={styles.headerBuf}>
+
+
+
+
+
+
+
+
+
+
+
+
+            {/*
+            {botao1_aberto && (
+                <div className={styles.test}>
                     <h1>
-                        buffer 
+                        Botão 1
                     </h1>
-                </header>
-            </div>
 
-            <div className={styles.tabFunc}>
-                <header className={styles.header}>
-                    <h1>
-                        Funcional
-                    </h1>
-                </header>
-                <div className={styles.line1}>
-                    <h1 className={styles.lineHeader}>
-                        1
-                    </h1>
                 </div>
+            )}
 
-                <div className={styles.line2}>
-                </div>
+            <div className={styles.Menu}>
+                <nav className={styles.Nav}>
 
-                <div className={styles.line3}>
-                </div>
-
-                <div className={styles.line4}>
-                </div>
+                       <button 
+                        className={styles.btn}
+                        onClick={abreMenu1}
+                    >
+                        {botao1_aberto ? 'Fechar Menu' : 'Abrir Menu'}
+                    </button>
+                </nav>
 
             </div>
-
-            <div className={styles.tabBuf2}>
-                <header className={styles.headerBuf}>
-                    <h1>
-                        buffer 
-                    </h1>
-                </header>
-            </div>
-
-             <div className={styles.tabPL}>
-                <header className={styles.header}>
-                    <h1>
-                        Power Loads
-                    </h1>
-                </header>
-                <div className={styles.line1}>
-                    <h1 className={styles.lineHeader}>
-                        111
-                    </h1>
-                </div>
-
-                <div className={styles.line2}>
-                </div>
-
-                <div className={styles.line3}>
-                </div>
-
-                <div className={styles.line4}>
-                </div>
-
-            </div>
-
-            <div className={styles.tabBuf3}>
-                <header className={styles.headerBuf}>
-                    <h1>
-                        buffer 
-                    </h1>
-                </header>
-            </div>
-
-
-    
-
-
-
-
-
-
-
-
-        </div>
+        
+            */}
+        </>
     )
 
 

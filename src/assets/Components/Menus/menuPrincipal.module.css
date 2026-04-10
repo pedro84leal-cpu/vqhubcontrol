@@ -7,10 +7,9 @@
 
 .container {
 
-  margin-left: var(--menu-width-desktop);
-  padding: 1rem;
-  transition: margin-left 0.3s ease;
-  width: calc(100% - var(--menu-width-desktop));
+    padding: 1rem;
+    transition: margin-left 0.3s ease;
+    width: auto
 }
 
 

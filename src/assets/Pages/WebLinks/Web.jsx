@@ -26,7 +26,6 @@ function Web(){
 
     return(
         <>
-        <div className={styles.webContainer}>
         <MenuPrincipal/>
         <div className={styles.webMenu} >
             <header className={styles.webTitulo}>
@@ -96,8 +95,7 @@ function Web(){
                 <Menu_Ecog menu_ecog_Aberto={menu_ecog_Aberto} />
                 </nav>
                 </aside>                
-            </div>
-        </div>       
+        </div>      
         </>   
     )
 }

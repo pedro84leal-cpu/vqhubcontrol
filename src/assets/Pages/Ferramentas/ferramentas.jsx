@@ -2,42 +2,18 @@ import { Link } from 'react-router-dom';
 import MenuPrincipal from "../../Components/Menus/menuPrincipal"
 import styles from '../../Pages/Ferramentas/ferramentas.module.css'
 import { IoChevronBack } from "react-icons/io5";
-import { IoIosCloudUpload } from "react-icons/io";
-import { BsSim } from "react-icons/bs";
-import { RiRouterFill } from "react-icons/ri";
-import { RiSecurePaymentFill } from "react-icons/ri";
-import { AiOutlineGateway } from "react-icons/ai";
-import { FaNairaSign } from "react-icons/fa6";
-import { FaTeeth } from "react-icons/fa6";
-import { FaCodeCompare } from "react-icons/fa6";
-import { MdKeyboardArrowRight } from "react-icons/md";
-import Menu_Ecog from '../WebLinks/MenuEcog'
-import { useState } from 'react';
+import { PiWebhooksLogoFill } from "react-icons/pi";
+import { SiRetool } from "react-icons/si";
+import { SiMubi } from "react-icons/si";
+
 
 
 
 
 function Ferramentas(){
 
-
-    const abrirPrograma = async () => {
-    // Verifica se está rodando dentro do Electron
-    if (window.electronAPI) {
-      try {
-        await window.electronAPI.abrirPrograma('C:\\Caminho\\Do\\Seu\\Programa.exe')
-        console.log('Programa aberto!')
-        } catch (error) {
-        console.error('Erro:', error)
-      }
-            } else {
-      console.log('Rodando no navegador - não é possível abrir programas locais')
-        }
-    }
-
-
     return(
         <>
-        <div className={styles.toolContainer}>
         <MenuPrincipal/>
         <div className={styles.toolMenu} >
             <header className={styles.toolTitulo}>
@@ -52,12 +28,27 @@ function Ferramentas(){
                     <IoChevronBack  className={styles.toolIcon} />
                 </Link>
 
+        
+                <a href="http://192.168.2.100" className={styles.toolLink} target="_blank" rel="noopener noreferrer">
+                    <PiWebhooksLogoFill  className={styles.toolIcon} />
+                    <span>wizard</span>
+                </a>
+
+                <a href="http://192.168.2.100" className={styles.toolLink} target="_blank" rel="noopener noreferrer">
+                    <SiRetool  className={styles.toolIcon} />
+                    <span>Ic Tool</span>
+                </a>
+
+                <a href="http://192.168.2.100" className={styles.toolLink} target="_blank" rel="noopener noreferrer">
+                    <SiMubi   className={styles.toolIcon} />
+                    <span>Ev Simulator</span>
+                </a>
+
 
        
-                </nav>
-                </aside>                
-            </div>
-        </div>       
+            </nav>
+            </aside>                
+        </div>     
         </>   
     )
 }

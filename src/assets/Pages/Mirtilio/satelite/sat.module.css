@@ -1,0 +1,246 @@
+.st_Led{
+
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    left: 170px;
+    top: 8px;
+}
+
+.st_Menu{
+
+    position: fixed;
+    top: 20px;
+    background-color: rgba(123, 127, 134, 0.226);
+    width: auto;
+    height: 60px;
+    left: 18%; 
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 5px 0 #72707083, 0 4px 4px rgb(167, 165, 165);
+    overflow-x: hidden;
+
+}
+
+
+.st_Titulo{
+
+    position: fixed;
+    font-size: 0.5rem;
+    top: 80px;
+    left: 260px;
+    color:rgba(68, 73, 77, 0.501)
+}
+
+
+
+.st_Nav {
+
+  flex-direction: row;
+  gap: 0.75rem;
+  padding: 0.5rem 0.5rem;
+}
+
+
+.st_Conex {
+
+    font-size: 0.8rem;
+    font-weight: bold;
+    background: rgb(25, 85, 172);
+    color: white;
+    width: 180px;
+    height: 40px;  
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: center;
+    box-shadow: 0 5px 0 #8a878783, 0 8px 8px rgb(160, 151, 151);
+  
+}
+
+.st_Conex:hover:not(:disabled) {
+
+    background-color:  rgba(20, 94, 198, 0.882);
+   
+   
+}
+
+.st_Conex:active:not(:disabled) {
+
+    transform: translateY(5px);  
+   
+}
+
+.st_Conex:disabled {
+
+    opacity: 0.5;
+    cursor: not-allowed;
+    background-color: #94a3b8;  
+    box-shadow: none;
+    transform: none;
+}
+
+
+.st_Btn_Green {
+
+    position: relative;
+    background-color: #61dafb;
+    border-radius: 8px;
+    color: #282c34;
+    cursor: pointer;
+    transition: all 0.3s;
+    width: 180px;
+    height: 40px;
+    box-shadow: 0 5px 0 #8a878783, 0 8px 8px rgb(160, 151, 151);
+}
+
+.st_Btn_Green:hover:not(:disabled) {
+
+    background-color: #4fa8c7;
+    transform: scale(1.05);
+}
+
+.st_Btn_Green.loading {
+
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+
+.st_Btn_Red {
+
+    position: relative;
+    background-color: #61dafb;
+    border-radius: 8px;
+    color: #282c34;
+    cursor: pointer;
+    transition: all 0.3s;
+    width: 180px;
+    height: 40px;
+    box-shadow: 0 5px 0 #8a878783, 0 8px 8px rgb(160, 151, 151);
+}
+
+.st_Btn_Red:hover:not(:disabled) {
+
+    background-color: #4fa8c7;
+    transform: scale(1.05);
+}
+
+.st_Btn.loadingRed {
+
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+
+.st_Hero {
+
+  position: fixed;
+  left: 210px;
+  top: 100px;
+  width: 250px;
+  height: 150px;
+  overflow: hidden;
+
+}
+
+.st_Imagem {
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 115%;
+  object-fit: fill; 
+}
+
+
+.st_Grid {
+
+    position: fixed;
+    top: 270px;
+    left: 280px;
+    width: 500px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;  
+    gap: 15px;
+    grid-auto-rows: 100px;  
+}
+
+
+.st_Grid div {
+
+    background-color: rgba(66, 70, 66, 0.098);
+    border-radius: 8px;
+}
+
+
+.st_H1{
+
+    font-size: 0.8rem;
+    padding: 0.5rem;
+    color:#0000009f
+
+}
+
+
+.st_SpamPU{
+
+    position: absolute;
+    top: 135px;
+    font-size: 0.7rem;
+    left: 75px;
+    word-break: normal;
+}
+
+
+.st_Hero2 {
+
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  right: 20px;
+  left: auto;
+  top: 100px;
+  width: 250px;
+  height: 160px;
+  overflow: hidden;
+}
+
+
+.st_Imagem2 {
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80%;
+  height: 105%;
+  object-fit: fill; 
+}
+
+
+.st_SpamBB{
+
+    position: absolute;
+    text-align: center;
+    top: 135px;
+    font-size: 0.7rem;
+    left: 62px;
+}
+
+
+.st_Rodape {
+
+    background-color: #f0f0f07a;
+    padding: 1.2rem;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #000000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.098);
+    border-bottom: 1px solid #ccc;
+    position: relative;
+    top: 80vh;
+    width: auto;
+    height: auto;
+}

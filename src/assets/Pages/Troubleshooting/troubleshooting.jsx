@@ -12,8 +12,7 @@ function Troubleshooting(){
     
 
     return(
-           <>
-        <div className={styles.tsContainer}>
+        <>
         <MenuPrincipal/>
         <div className={styles.tsMenu} >
             <header className={styles.tsTitulo}>
@@ -32,9 +31,7 @@ function Troubleshooting(){
 
                 </nav>
                 </aside>
-            </div>
-    
-        </div> 
+        </div>
         </>
 
     )

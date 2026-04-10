@@ -7,50 +7,43 @@ import { IoCodeWorkingSharp } from "react-icons/io5";
 import { IoChevronBack } from "react-icons/io5";
 
 
-
-
-
 function Dashboard(){
-
-
 
     return(
         <>
-        <div className={styles.dashboardContainer}>
-        <MenuPrincipal/>
-        <div className={styles.dashboardMenu}>
-            <header className={styles.dashboardTitulo}>
-                <h1>
-                    Dashboard
-                </h1>
-            </header>
-            <aside>
-            <nav className={styles.dashboardNav}>
+            <MenuPrincipal/>
 
-                <Link to="/" className={styles.dashboardLink}>
-                    <IoChevronBack  className={styles.dashboardIcon} />
-                </Link>
+            <div className={styles.dashboardMenu}>
+                <header className={styles.dashboardTitulo}>
+                    <h1>
+                        Dashboard
+                    </h1>
+                </header>
+                <aside>
+                <nav className={styles.dashboardNav}>
 
-                <Link to="/gestao" className={styles.dashboardLink}>
-                    <TiFlowParallel className={styles.dashboardIcon} />
-                    <span>Gestão de linha </span>
-                </Link>
+                    <Link to="/" className={styles.dashboardLink}>
+                        <IoChevronBack  className={styles.dashboardIcon} />
+                    </Link>
 
-                <Link className={styles.dashboardLink}>
-                    <MdEditCalendar className={styles.dashboardIcon}/>     
-                    <span>Planeamento </span>
-                </Link>
+                    <Link to="/gestao" className={styles.dashboardLink}>
+                        <TiFlowParallel className={styles.dashboardIcon} />
+                        <span>Gestão de linha </span>
+                    </Link>
 
-                <Link className={styles.dashboardLink} >
-                    <IoCodeWorkingSharp className={styles.dashboardIcon} />
-                    <span>Rework's </span>
-                </Link>
+                    <Link to="/planeamento" className={styles.dashboardLink}>
+                        <MdEditCalendar className={styles.dashboardIcon}/>     
+                        <span>Planeamento </span>
+                    </Link>
+
+                    <Link className={styles.dashboardLink} >
+                        <IoCodeWorkingSharp className={styles.dashboardIcon} />
+                        <span>Rework's </span>
+                    </Link>
 
                 </nav>
                 </aside>
             </div>
-    
-        </div> 
         </>   
     )
 }

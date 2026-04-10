@@ -1,131 +1,37 @@
-
-
-.bbMenu {
-
-  position: fixed;
-  top: 0;
-  background-color: rgba(0, 100, 255);
-  width: 170px;
-  height: 140vh;
-  min-width: 100px;
-  left: 70px; 
-  border-left: none; 
-  overflow: hidden;
-  z-index: 999;  
-}
-
-
-
-.bbTitulo {
-
-  text-align: center;
-  color: white;
-  padding: 2rem 0 1.7rem 0 ;
-  font-family: Ubuntu;
-  font-size: 0.5rem;
-  overflow-wrap: break-word;
-  transition: font-size 0.3s;
-}
-
 .ledONOFF{
 
-    position: relative;
-    width: 80px;
-    height: 80px;
-    object-fit: contain;
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    left: 170px;
+    top: 8px;
 }
-
-
-
-.bbNav {
-
-  flex-direction: column;
-  gap: 0.25rem;
-  padding: 0.5rem 0.5rem;
-}
-
-
-.bbLink {
-
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  padding: 0.75rem;
-  color: rgb(255, 255, 255);
-  text-decoration: none;
-  border-radius: 8px;
-  transition: all 0.2s;
-  white-space: nowrap;
-
-}
-
-.bbLink:hover {
-  background-color: rgba(255, 255, 255, 0.15);
-}
-
-
-.bbIcon {
-
-  width: 22px;
-  height: 22px;
-  flex-shrink: 0;
-}
-
-
-.bbLink span {
-
-    font-size: 0.7rem;
-    font-family: Ubuntu, sans-serif;
-    transition: opacity 0.2s;
-    display: flex;
-    align-items: center;
-    gap: 25px;
-}
-
-.bbTexto {
-
-  display: flex;
-  flex-direction: column; 
-  line-height: 1.2;
-  gap: 2px;
-  font-family: Ubuntu;
-  font-size: 13px;            
-}
-
-
-.bbSmall {
-  font-size: 0.6rem;
-  opacity: 0.7;
-}
-
-.bbMenu:hover .bbLink span {
-  opacity: 1;
-}
-
-
-.bbIcon {
-
-  width: 22px;
-  height: 22px;
-  flex-shrink: 0;
-}
-
-
-
-
 
 .bb2Menu{
 
     position: fixed;
-    top: 15px;
-    background-color: rgba(123, 127, 134, 0.114);
+    top: 20px;
+    background-color: rgba(123, 127, 134, 0.226);
     width: auto;
     height: 60px;
-    left: 280px; 
+    left: 18%; 
     overflow: hidden;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.098);
+    box-shadow: 0 5px 0 #72707083, 0 4px 4px rgb(167, 165, 165);
+    overflow-x: hidden;
+
 }
+
+
+.stTitulo{
+
+    position: fixed;
+    font-size: 0.5rem;
+    top: 80px;
+    left: 260px;
+    color:rgba(68, 73, 77, 0.501)
+}
+
 
 
 .bb2Nav {
@@ -137,10 +43,9 @@
 
 .bbBtnConexao {
 
-    font-size: 12px;
-    font-family: Ubuntu;
-    font-weight: 500;
-    background-color: #2564eb;
+    font-size: 0.8rem;
+    font-weight: bold;
+    background: rgb(25, 85, 172);
     color: white;
     width: 180px;
     height: 40px;  
@@ -149,22 +54,21 @@
     cursor: pointer;
     transition: all 0.2s ease;
     text-align: center;
-    letter-spacing: 0.3px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.471);
-    z-index: 1000;
+    box-shadow: 0 5px 0 #8a878783, 0 8px 8px rgb(160, 151, 151);
+  
 }
 
 .bbBtnConexao:hover:not(:disabled) {
 
-    background-color:  rgb(25, 85, 172);  
-    transform: translateY(-1px);  
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    background-color:  rgba(20, 94, 198, 0.882);
+   
+   
 }
 
 .bbBtnConexao:active:not(:disabled) {
 
-    transform: translateY(0);  
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    transform: translateY(5px);  
+   
 }
 
 .bbBtnConexao:disabled {
@@ -187,6 +91,7 @@
     transition: all 0.3s;
     width: 180px;
     height: 40px;
+    box-shadow: 0 5px 0 #8a878783, 0 8px 8px rgb(160, 151, 151);
 }
 
 .controlbuttonGreen:hover:not(:disabled) {
@@ -212,6 +117,7 @@
     transition: all 0.3s;
     width: 180px;
     height: 40px;
+    box-shadow: 0 5px 0 #8a878783, 0 8px 8px rgb(160, 151, 151);
 }
 
 .controlbuttonRed:hover:not(:disabled) {
@@ -269,105 +175,16 @@
         0 4px 8px rgba(0,0,0,0.2);
 }
 
-.btnEflow1{
-
-    position: relative;
-    top:60px;
-    font-size: 12px;
-    font-family: Ubuntu;
-    font-weight: 500;
-    background-color: #2563eb;
-    color: white;
-    width: 200px;
-    height: 42px;  
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    text-align: center;
-    letter-spacing: 0.3px;
-    box-shadow: 0 2px 4px rgba(43, 46, 46, 0.471);
-    z-index: 999;
-}
-
-.btnEflow1:hover{
-  background-color: rgb(25, 85, 172);  
-  transform: translateY(-1px);  
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.471);
-}
-
-.btnEflow1:active {
-  transform: translateY(2px);       
-  background-color: rgb(25, 85, 172);         
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.471);  
-  transition: all 0.05s;              
-}
-
-.btnEflow2{
-  position: relative;
-  top:80px;
-  font-size: 12px;
-  font-family: Ubuntu;
-  font-weight: 500;
-  background-color: #2563eb;
-  color: white;
-  width: 200px;
-  height: 42px;  
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  text-align: center;
-  letter-spacing: 0.3px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.471);
-  z-index: 999;
-}
-
-.btnEflow2:hover{
-  background-color:  rgb(25, 85, 172);  
-  transform: translateY(-1px);  
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-}
-
-.btnEflow2:active {
-  transform: translateY(2px);       
-  background-color: rgb(25, 85, 172);         
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.471);  
-  transition: all 0.05s;              
-}
-
-.menuAberto {
-  position: relative;
-  width: 160px;
-  background-color: rgba(255, 255, 255, 0.12); 
-  border-radius: 6px; 
-}
-
-
-.rodape {
-
-    background-color: #f0f0f07a;
-    padding: 20px;
-    text-align: center;
-    font-size: 10px;
-    color: #000000;
-    border-bottom: 1px solid #ccc;
-    position: relative;
-    top: 80vh;
-    width: 80%;
-    height: 5px;
-    font-family: Ubuntu;
-}
 
 .hero {
 
   position: fixed;
-  left: 30%;
-  top: 5%;
-  width: 100px;
-  height: 100px;
+  left: 210px;
+  top: 100px;
+  width: 250px;
+  height: 150px;
   overflow: hidden;
-  background-color: #2563eb;
+
 }
 
 .imagem {
@@ -376,6 +193,88 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  object-fit: cover; 
+  height: 115%;
+  object-fit: fill; 
+}
+
+.grid {
+
+    position: fixed;
+    top: 270px;
+    left: 280px;
+    width: 500px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;  
+    gap: 15px;
+    grid-auto-rows: 100px;  
+}
+
+.grid div {
+
+    background-color: rgba(66, 70, 66, 0.098);
+    border-radius: 8px;
+}
+
+.h1{
+
+    font-size: 0.8rem;
+    padding: 0.5rem;
+    color:#0000009f
+
+}
+
+.spamPU{
+
+    position: absolute;
+    top: 135px;
+    font-size: 0.7rem;
+    left: 75px;
+    word-break: normal;
+}
+
+.hero2 {
+
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  right: 20px;
+  left: auto;
+  top: 100px;
+  width: 250px;
+  height: 160px;
+  overflow: hidden;
+}
+
+.imagem2 {
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80%;
+  height: 105%;
+  object-fit: fill; 
+}
+
+.spamBB{
+
+    position: absolute;
+    text-align: center;
+    top: 135px;
+    font-size: 0.7rem;
+    left: 62px;
+}
+
+.rodape {
+
+    background-color: #f0f0f07a;
+    padding: 1.2rem;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #000000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.098);
+    border-bottom: 1px solid #ccc;
+    position: relative;
+    top: 80vh;
+    width: auto;
+    height: auto;
 }
