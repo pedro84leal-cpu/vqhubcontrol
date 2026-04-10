@@ -1,6 +1,6 @@
-import MenuPrincipal from "../../../Components/Menus/menuPrincipal"
-import Dashboard from "../dashboard"
-import styles from './gestao.module.css'
+import MenuPrincipal from "../../../../Components/Menus/menuPrincipal"
+import Dashboard from "../../dashboard"
+import styles from '../../Dashboard-Pages/Gestao-linha/gestao.module.css'
 import { useState } from 'react';
 
 

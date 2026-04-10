@@ -2,7 +2,6 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './assets/Pages/Home';
 import MirtilioConsoleMenu from './assets/Pages/Mirtilio/MirtilioConsoleMenu';
 import Dashboard from './assets/Pages/Dashboard/dashboard';
-import Gestao from './assets/Pages/Dashboard/Dashboard-Pages/gestaoLinha';
 import Troubleshooting from './assets/Pages/Troubleshooting/troubleshooting';
 import Web from './assets/Pages/WebLinks/Web';
 import Ferramentas from './assets/Pages/Ferramentas/ferramentas';
@@ -14,6 +13,7 @@ import E_flow from './assets/Pages/Mirtilio/eflow/E_flow';
 import Satelite from './assets/Pages/Mirtilio/satelite/Satelites';
 import SateliteColed from './assets/Pages/Mirtilio/satelitesColed/satColed';
 import Planeamento from './assets/Pages/Dashboard/Dashboard-Pages/Planeamento/planeamento';
+import Gestao from './assets/Pages/Dashboard/Dashboard-Pages/Gestao-linha/gestaoLinha';
 
 
 
@@ -27,7 +27,7 @@ function App() {
         <Route path='/blueberry' element={<Blueberry />} />
         <Route path="/mirtilo-console" element={<MirtilioConsoleMenu/>} />
         <Route path='/dashboard' element={<Dashboard/>} />
-        <Route path='/gestao' element={<Gestao/>} />
+        <Route path='/gestao' element={<Gestao />} />
         <Route path='/troubleshooting' element={<Troubleshooting/>} />
         <Route path='/web' element={<Web />} />
         <Route path='/tools' element={<Ferramentas />} />
