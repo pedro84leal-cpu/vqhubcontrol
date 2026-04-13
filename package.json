@@ -1,7 +1,8 @@
 {
   "name": "VQ Hub Control",
-  "homepage": "https://PedroLeal.github.io/vqhubcontrol",
+  "homepage": ".",
   "private": true,
+  "main": "public/electron.cjs",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
@@ -10,7 +11,9 @@
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "electron": "electron .",
+    "electron-dev": "concurrently \"npm run dev\" \"wait-on http://localhost:5173 && electron .\""
   },
   "dependencies": {
     "@fortawesome/free-brands-svg-icons": "^7.2.0",
@@ -24,13 +27,16 @@
     "@types/react": "^18.2.43",
     "@types/react-dom": "^18.2.17",
     "@vitejs/plugin-react": "^4.2.1",
-    "electron": "^41.1.1",
+    "concurrently": "^9.2.1",
+    "electron": "^41.2.0",
+    "electron-reloader": "^1.2.3",
     "eslint": "^8.55.0",
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.5",
     "gh-pages": "^6.1.1",
     "vite": "^5.0.8",
-    "vite-plugin-electron": "^0.29.1"
+    "vite-plugin-electron": "^0.29.1",
+    "wait-on": "^9.0.5"
   }
 }

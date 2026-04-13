@@ -18,6 +18,7 @@ import EcogMenu from './assets/Pages/WebLinks/Ecog';
 import MenuPCB from './assets/Pages/Produtividade/EsquemasPCB/menuPCB';
 import MenuComp from './assets/Pages/Produtividade/EsquemasComp/Comp';
 import MenuIT from './assets/Pages/Produtividade/ITs/IT';
+import IcT from './assets/Pages/Ferramentas/IcTools/IcTools';
 
 
 
@@ -45,6 +46,7 @@ function App() {
         <Route path='/pcb' element={<MenuPCB />} />
         <Route path='/comp' element={<MenuComp />} />
         <Route path='/it' element={<MenuIT />} />
+        <Route path='/Ict' element={<IcT />} />
       </Routes>
   );
 }

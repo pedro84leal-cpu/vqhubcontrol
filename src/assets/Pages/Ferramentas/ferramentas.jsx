@@ -12,6 +12,15 @@ import { SiMubi } from "react-icons/si";
 
 function Ferramentas(){
 
+    const abrirIcTools = () => {
+    if (window.electronAPI) {
+      // Exemplo: Abrir o Bloco de Notas do Windows
+      window.electronAPI.abrirPrograma('C:/Users/Utilizador/OneDrive - I-Charging/Documents/VQ/ICTOOLS/ic-production.exe');
+    } else {
+      alert('Electron não está disponível. Execute com npm run electron-dev');
+    }
+  };
+
     return(
         <>
         <MenuPrincipal/>
@@ -24,20 +33,15 @@ function Ferramentas(){
             <aside>
             <nav className={styles.toolNav}>
 
-                <Link to="/" className={styles.toolLink}>
-                    <IoChevronBack  className={styles.toolIcon} />
-                </Link>
-
-        
-                <a href="http://192.168.2.100" className={styles.toolLink} target="_blank" rel="noopener noreferrer">
+                 <a href="http://192.168.2.100" className={styles.toolLink} target="_blank" rel="noopener noreferrer">
                     <PiWebhooksLogoFill  className={styles.toolIcon} />
                     <span>wizard</span>
                 </a>
 
-                <a href="http://192.168.2.100" className={styles.toolLink} target="_blank" rel="noopener noreferrer">
+                <Link to='#' className={styles.toolLink} onClick={abrirIcTools} >
                     <SiRetool  className={styles.toolIcon} />
                     <span>Ic Tool</span>
-                </a>
+                </Link>
 
                 <a href="http://192.168.2.100" className={styles.toolLink} target="_blank" rel="noopener noreferrer">
                     <SiMubi   className={styles.toolIcon} />
