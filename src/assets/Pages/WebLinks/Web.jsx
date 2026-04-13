@@ -11,18 +11,11 @@ import { FaNairaSign } from "react-icons/fa6";
 import { FaTeeth } from "react-icons/fa6";
 import { FaCodeCompare } from "react-icons/fa6";
 import { MdKeyboardArrowRight } from "react-icons/md";
-import Menu_Ecog from '../WebLinks/MenuEcog'
-import { useState } from 'react';
+
 
 
 
 function Web(){
-
-    const [menu_ecog_Aberto , setmenu_ecog_Aberto ] = useState(false)
-  
-    const abre_menu_ecog_Aberto  = () => {
-    setmenu_ecog_Aberto (!menu_ecog_Aberto ) 
-  }
 
     return(
         <>
@@ -78,11 +71,10 @@ function Web(){
                     <span>Nayax </span>
                 </a>
 
-                <a href="#" className={`${styles.webLink} ${menu_ecog_Aberto ? styles.menuAberto : ''}`}
-                    onClick={(e) => {e.preventDefault(); abre_menu_ecog_Aberto();}}>
+                <Link to='/ecog' className={styles.webLink} >
                     <FaCodeCompare className={styles.webIcon} />
                     <span>Ecog <MdKeyboardArrowRight size={22} color='white' /></span>
-                </a>
+                </Link>
 
                 <a href="#" 
                         className={styles.webLink} 
@@ -91,8 +83,6 @@ function Web(){
                     <span>Switch</span>
                 </a>
 
-          
-                <Menu_Ecog menu_ecog_Aberto={menu_ecog_Aberto} />
                 </nav>
                 </aside>                
         </div>      

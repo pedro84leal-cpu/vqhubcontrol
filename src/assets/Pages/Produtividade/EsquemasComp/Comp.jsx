@@ -1,31 +1,34 @@
-import styles from '../../Produtividade/EsquemasPCB/pcb.module.css'
+import styles from '../../Produtividade/EsquemasComp/Comp.module.css'
 import Prodt from '../../Produtividade/produtividade'
 import MenuPrincipal from '../../../Components/Menus/menuPrincipal';
 import { useState } from 'react';
 
-import imagem1 from '../../../Images/boards/ccs-board.jpg';
-import imagem2 from '../../../Images/boards/Power_Fusion_R2.jpg';
-import imagem3 from '../../../Images/boards/CCMD BB FUSION e R2.jpg';
-import imagem4 from '../../../Images/boards/CCMD Cluster c satélites.jpg';
-import imagem5 from '../../../Images/boards/CCMD Plus cluster de BB.jpg';
-import imagem6 from '../../../Images/boards/CCMD_BBP.jpg';
-import imagem7 from '../../../Images/boards/CCMD_v01.jpg';
-import imagem8 from '../../../Images/boards/SENSING.jpg';
+import imagem1 from '../../../Images/comp/Bender.jpg';
+import imagem2 from '../../../Images/comp/feed V.jpg';
+import imagem3 from '../../../Images/comp/SV.jpg';
+import imagem4 from '../../../Images/comp/SC L.jpg';
+import imagem5 from '../../../Images/comp/SI.jpg';
+import imagem6 from '../../../Images/comp/Feed.jpg';
+import imagem7 from '../../../Images/comp/retratores.jpg';
+import imagem8 from '../../../Images/comp/Vent.jpg';
 
-function MenuPCB() {
+
+
+
+function MenuComp() {
   const [searchTerm, setSearchTerm] = useState('');
   const [zoomImage, setZoomImage] = useState(null);
   const [zoomLevel, setZoomLevel] = useState(1);
 
   const imagens = [
-    { id: 1, src: imagem1, titulo: 'Esquema CCS', descricao: 'CCS' },
-    { id: 2, src: imagem2, titulo: 'Esquema Power', descricao: 'Fusion' },
-    { id: 3, src: imagem3, titulo: 'CCMD', descricao: 'BB; Fusion; R2' },
-    { id: 4, src: imagem4, titulo: 'CCMD_Cluster', descricao: 'Cluster - satélites' },
-    { id: 5, src: imagem5, titulo: 'CCMD_Plus', descricao: 'Plus cluster_BB' },
-    { id: 6, src: imagem6, titulo: 'CCMD', descricao: 'CCMD' },
-    { id: 7, src: imagem7, titulo: 'CCMD_V01', descricao: 'Nova versão' },
-    { id: 8, src: imagem8, titulo: 'SENSING', descricao: 'Sensing base' },
+    { id: 1, src: imagem1, titulo: 'Monitor de isolamento', descricao: 'Bender' },
+    { id: 2, src: imagem2, titulo: 'Feedback sensor de tensão', descricao: '' },
+    { id: 3, src: imagem3, titulo: 'Sensor de tensão', descricao: 'Alimentação' },
+    { id: 4, src: imagem4, titulo: 'Leituras', descricao: 'Sensor de tensão' },
+    { id: 5, src: imagem5, titulo: 'Sensor de corrente', descricao: 'Alimentação' },
+    { id: 6, src: imagem6, titulo: 'Feedback sensor de corrente', descricao: '' },
+    { id: 7, src: imagem7, titulo: 'Retratores', descricao: '' },
+    { id: 8, src: imagem8, titulo: 'Ventiladores', descricao: '' },
   ];
 
   const imagensFiltradas = imagens.filter(img =>
@@ -52,7 +55,7 @@ function MenuPCB() {
       <Prodt />
       <div className={styles.pcbContainer}>
         <h1 className={styles.pcbTitulo}>
-            Esquemas de cartas - Ligações
+            Esquemas de componentes - Ligações
         </h1>
         <div className={styles.searchContainer}>
           <input type="text" placeholder="Pesquisar esquema..." value={searchTerm}
@@ -123,4 +126,4 @@ function MenuPCB() {
   );
 }
 
-export default MenuPCB;
+export default MenuComp;

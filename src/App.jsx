@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Home from './assets/Pages/Home';
 import MirtilioConsoleMenu from './assets/Pages/Mirtilio/MirtilioConsoleMenu';
 import Dashboard from './assets/Pages/Dashboard/dashboard';
@@ -14,6 +14,10 @@ import Satelite from './assets/Pages/Mirtilio/satelite/Satelites';
 import SateliteColed from './assets/Pages/Mirtilio/satelitesColed/satColed';
 import Planeamento from './assets/Pages/Dashboard/Dashboard-Pages/Planeamento/planeamento';
 import Gestao from './assets/Pages/Dashboard/Dashboard-Pages/Gestao-linha/gestaoLinha';
+import EcogMenu from './assets/Pages/WebLinks/Ecog';
+import MenuPCB from './assets/Pages/Produtividade/EsquemasPCB/menuPCB';
+import MenuComp from './assets/Pages/Produtividade/EsquemasComp/Comp';
+import MenuIT from './assets/Pages/Produtividade/ITs/IT';
 
 
 
@@ -37,6 +41,10 @@ function App() {
         <Route path='/sat' element={<Satelite />} />
         <Route path='/satColed' element={<SateliteColed />} />
         <Route path='/planeamento' element={<Planeamento />} />
+        <Route path='/ecog' element={<EcogMenu />} />
+        <Route path='/pcb' element={<MenuPCB />} />
+        <Route path='/comp' element={<MenuComp />} />
+        <Route path='/it' element={<MenuIT />} />
       </Routes>
   );
 }
