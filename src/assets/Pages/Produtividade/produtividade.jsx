@@ -25,6 +25,7 @@ function Prodt(){
 
                 <Link to="/" className={styles.proLink}>
                     <IoChevronBack  className={styles.proIcon} />
+                    <span>Home</span>
                 </Link>
 
                 <Link to='/pcb' className={styles.proLink} >

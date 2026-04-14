@@ -1,0 +1,32 @@
+.container{
+    
+    position: fixed;
+    left: 180px;
+    width: auto;
+    height: auto;
+}
+
+.post1{
+
+    position: relative;
+    top: 50px;
+    border: 1px solid rgb(249, 0, 0);
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px 1px rgba(0, 0, 0, 0.369);
+    background-color: rgba(248, 248, 248, 0.55);
+    width: 350px;
+    height: 350px;
+}
+
+.titulo{
+
+    text-align: center;
+    font-size: 1.5rem;
+
+
+}
+
+.text{
+
+    color:rgba(0, 0, 0, 0.369)
+}

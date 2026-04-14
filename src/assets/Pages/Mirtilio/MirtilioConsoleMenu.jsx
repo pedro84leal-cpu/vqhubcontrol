@@ -33,6 +33,7 @@ function MirtilioConsoleMenu() {
 
             <Link  to="/" className={styles.mLink}>
               <IoChevronBack  className={styles.mIcon} />
+              <span>Home</span>
             </Link>
 
 

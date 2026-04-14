@@ -96,3 +96,18 @@
   height: 22px;
   flex-shrink: 0;
 }
+
+
+.line{
+
+  width: 100%;
+  border: 1px solid rgba(239, 235, 235, 0.344);
+}
+
+.span{
+
+  padding-top: 1.5rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: rgba(197, 191, 191, 0.572);
+}

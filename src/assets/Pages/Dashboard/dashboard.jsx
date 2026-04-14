@@ -24,6 +24,7 @@ function Dashboard(){
 
                     <Link to="/" className={styles.dashboardLink}>
                         <IoChevronBack  className={styles.dashboardIcon} />
+                        <span>Home</span>
                     </Link>
 
                     <Link to="/gestao" className={styles.dashboardLink}>

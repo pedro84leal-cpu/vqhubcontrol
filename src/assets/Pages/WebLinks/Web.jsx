@@ -31,6 +31,7 @@ function Web(){
 
                 <Link to="/" className={styles.webLink}>
                     <IoChevronBack  className={styles.webIcon} />
+                    <span>Home</span>
                 </Link>
 
                 <a href="https://my.i-charging.pt/en/equipments" className={styles.webLink} 
@@ -76,8 +77,7 @@ function Web(){
                     <span>Ecog <MdKeyboardArrowRight size={22} color='white' /></span>
                 </Link>
 
-                <a href="#" 
-                        className={styles.webLink} 
+                <a className={styles.webLink} 
                         target="_blank" rel="noopener noreferrer">
                     <FaTeeth className={styles.webIcon} />
                     <span>Switch</span>

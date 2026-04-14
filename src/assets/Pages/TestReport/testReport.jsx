@@ -26,6 +26,7 @@ function TestReport(){
 
                 <Link to="/" className={styles.repoLink}>
                     <IoChevronBack  className={styles.repoIcon} />
+                    <span>Home</span>
                 </Link>
                 
                 <a href="https://icharging.sharepoint.com/sites/internalchannel/quality/Controlled%20Documentation/Test%20Report%20Serial%20Number.xlsm?d=w67e5e7dc99fc4763baf55a621e740d45" 
@@ -41,6 +42,10 @@ function TestReport(){
                     <GrAd className={styles.repoIcon} />
                     <span>omni-e </span>
                 </a>
+
+                <span className={styles.span}>Consultar</span>
+
+                <hr className={styles.line}></hr>
 
                 <a href="https://icharging.sharepoint.com/sites/internalchannel/P&P/VQ%20Tests%202025/Forms/AllItems.aspx?as=json" 
                     className={styles.repoLink} 
